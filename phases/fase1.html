@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="phase" content="1">
+  <title>PROYECTO INVINCIBLE — FASE 1: IGNITION PROTOCOL</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/phase.css">
+</head>
+<body class="phase-page">
+
+<!-- NAV -->
+<nav class="phase-nav" id="phase-nav">
+  <div class="phase-nav-inner">
+    <a href="../index.html" class="nav-brand">⬡ PROYECTO INVINCIBLE</a>
+    <div class="nav-links">
+      <a href="fase1.html" class="nav-link active">F1</a>
+      <a href="fase2.html" class="nav-link">F2</a>
+      <a href="fase3.html" class="nav-link">F3</a>
+      <a href="fase4.html" class="nav-link">F4</a>
+      <a href="fase5.html" class="nav-link">F5</a>
+      <a href="fase6.html" class="nav-link">F6</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="phase-header">
+    <div class="phase-meta stagger">
+      <span class="phase-number">FASE 01 / 06</span>
+      <span class="badge badge--cyan">ACTIVA</span>
+      <span class="badge badge--green">PRINCIPIANTE</span>
+    </div>
+    <h1 class="phase-title glow-cyan">IGNITION PROTOCOL</h1>
+    <p class="phase-subtitle">"La adaptación es el primer paso. El cuerpo aprende antes que la mente lo entienda."</p>
+    <div class="phase-stats-row stagger">
+      <div class="phase-stat">
+        <span class="phase-stat__value">6</span>
+        <span class="phase-stat__label">Semanas</span>
+      </div>
+      <div class="phase-stat">
+        <span class="phase-stat__value">5</span>
+        <span class="phase-stat__label">Días/Semana</span>
+      </div>
+      <div class="phase-stat">
+        <span class="phase-stat__value">45–55</span>
+        <span class="phase-stat__label">Min/Sesión</span>
+      </div>
+      <div class="phase-stat">
+        <span class="phase-stat__value" style="color:var(--gold)">★★☆☆☆</span>
+        <span class="phase-stat__label">Dificultad</span>
+      </div>
+    </div>
+    <div class="flex gap-3 mt-4">
+      <div class="difficulty-meter" data-difficulty="2"></div>
+      <span class="label" style="margin-top:1px">DIFICULTAD</span>
+    </div>
+  </header>
+
+  <!-- OBJETIVO DE FASE -->
+  <div class="grid-2 mb-6 stagger">
+    <div class="info-box info-box--cyan">
+      <span class="info-box__icon">🎯</span>
+      <div>
+        <p class="info-box__title">OBJETIVO PRINCIPAL</p>
+        <p class="info-box__text">Despertar el sistema muscular desde un estado sedentario. Corregir postura, establecer patrones de movimiento correctos, fortalecer articulaciones y crear el hábito de entrenamiento. <strong>No es una fase de fuerza máxima — es de aprender a mover el cuerpo bien.</strong></p>
+      </div>
+    </div>
+    <div class="info-box info-box--gold">
+      <span class="info-box__icon">🖥️</span>
+      <div>
+        <p class="info-box__title">MODO PROGRAMADOR</p>
+        <p class="info-box__text">Cada sesión inicia con 8 min de activación anti-office: movilidad de cuello, hombros, cadena posterior y cadera. Específico para cuerpos que pasan 8+ horas sentados frente a pantalla.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALENTAMIENTO UNIVERSAL -->
+  <section class="mb-6">
+    <div class="section-header">
+      <span class="section-title">CALENTAMIENTO UNIVERSAL (8 MIN) — TODAS LAS SESIONES</span>
+    </div>
+    <div class="card card--cyan stagger">
+      <p class="label mb-3">⚡ EJECUTAR ANTES DE CADA SESIÓN SIN EXCEPCIÓN</p>
+      <div class="grid-2">
+        <div>
+          <p class="heading-md mb-2" style="color:var(--cyan)">ACTIVACIÓN ARTICULAR (4 min)</p>
+          <ul class="exercise-list">
+            <li><span>Rotación de cuello suave</span><span class="ex-reps">10 c/lado</span></li>
+            <li><span>Círculos de hombros</span><span class="ex-reps">15 adelante/atrás</span></li>
+            <li><span>Rotación de muñecas</span><span class="ex-reps">15 c/lado</span></li>
+            <li><span>Rotación de cadera (hula hoop)</span><span class="ex-reps">20 c/lado</span></li>
+            <li><span>Rotación de rodillas</span><span class="ex-reps">15 c/lado</span></li>
+            <li><span>Rotación de tobillos</span><span class="ex-reps">15 c/lado</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="heading-md mb-2" style="color:var(--cyan)">ACTIVACIÓN MUSCULAR (4 min)</p>
+          <ul class="exercise-list">
+            <li><span>Trote en el lugar</span><span class="ex-reps">60 seg</span></li>
+            <li><span>Jumping jacks suaves</span><span class="ex-reps">20 reps</span></li>
+            <li><span>Sentadillas de calentamiento (lentas)</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Puente de glúteos</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Cat-Cow (columna)</span><span class="ex-reps">10 reps</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEMANAS TABS -->
+  <section class="mb-4">
+    <div class="section-header">
+      <span class="section-title">SELECCIONA LA SEMANA</span>
+    </div>
+    <div class="week-tabs" id="week-tabs">
+      <button class="week-tab active" data-week="1" onclick="showWeek(1)">SEM 1</button>
+      <button class="week-tab" data-week="2" onclick="showWeek(2)">SEM 2</button>
+      <button class="week-tab" data-week="3" onclick="showWeek(3)">SEM 3</button>
+      <button class="week-tab deload" data-week="4" onclick="showWeek(4)">SEM 4 ⟳ DELOAD</button>
+      <button class="week-tab" data-week="5" onclick="showWeek(5)">SEM 5</button>
+      <button class="week-tab" data-week="6" onclick="showWeek(6)">SEM 6</button>
+    </div>
+  </section>
+
+  <!-- WEEK 1 -->
+  <div id="week-1" class="week-content">
+    <div class="info-box info-box--green mb-4">
+      <span class="info-box__icon">🌱</span>
+      <div>
+        <p class="info-box__title">SEMANA 1 — DESPERTAR DEL SISTEMA</p>
+        <p class="info-box__text">Volumen bajo, técnica perfecta. Si algún ejercicio se siente imposible, haz la versión más fácil. El objetivo es completar la sesión sin dolor articular.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">LUNES</span>
+          <span class="day-card__focus">PECHO + TRÍCEPS + HOMBRO</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--text-muted)">TRABAJO PRINCIPAL</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas (rodillas si necesario)</span><span class="ex-reps">3 × 8–10</span></li>
+            <li><span>Dips en silla (caderas cercanas)</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Pike pushups (hombros)</span><span class="ex-reps">2 × 8</span></li>
+            <li><span>Plancha isométrica</span><span class="ex-reps">3 × 20 seg</span></li>
+          </ul>
+          <p class="label mt-3 mb-2" style="color:var(--cyan)">ANTI-OFFICE FINISHER</p>
+          <ul class="exercise-list">
+            <li><span>Retracción escapular en pared</span><span class="ex-reps">2 × 15</span></li>
+            <li><span>Estiramiento pectoral en marco de puerta</span><span class="ex-reps">2 × 30 seg</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px">Descanso entre series: 90 seg</p>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MARTES</span>
+          <span class="day-card__focus">PIERNAS + CORE</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Sentadillas goblet (con objeto)</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Desplantes alternados</span><span class="ex-reps">3 × 10 c/pierna</span></li>
+            <li><span>Puente de glúteos</span><span class="ex-reps">3 × 20</span></li>
+            <li><span>Elevación de talones</span><span class="ex-reps">3 × 20</span></li>
+            <li><span>Leg raises acostado</span><span class="ex-reps">3 × 12</span></li>
+            <li><span>Dead bug</span><span class="ex-reps">3 × 8 c/lado</span></li>
+          </ul>
+          <p class="label mt-3 mb-2" style="color:var(--cyan)">MOVILIDAD DE CADERA</p>
+          <ul class="exercise-list">
+            <li><span>Zancada de lagarto</span><span class="ex-reps">1 min c/lado</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card day-card--rest">
+        <div class="day-card__header">
+          <span class="day-card__day">MIÉRCOLES</span>
+          <span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span>
+        </div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.9rem;margin-bottom:12px">No es día de descanso total — es recuperación activa. Mueve el cuerpo suavemente para lavar el lactato.</p>
+          <ul class="exercise-list">
+            <li><span>Caminata 20–30 min (o trote muy suave)</span><span class="ex-reps">1×</span></li>
+            <li><span>Rutina completa de movilidad (ver Fase 5)</span><span class="ex-reps">15 min</span></li>
+            <li><span>Foam rolling o masaje con pelota</span><span class="ex-reps">10 min</span></li>
+          </ul>
+          <div class="badge badge--green mt-3">SYSTEM RECOVERY PROTOCOL</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">JUEVES</span>
+          <span class="day-card__focus">ESPALDA + BÍCEPS</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Superman (extensión lumbar)</span><span class="ex-reps">3 × 12</span></li>
+            <li><span>Australian pull-ups / Remo invertido</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Dominadas asistidas (o negativas)</span><span class="ex-reps">3 × 5</span></li>
+            <li><span>Plancha lateral</span><span class="ex-reps">2 × 20 seg c/lado</span></li>
+            <li><span>Curl bíceps con mochila/objeto</span><span class="ex-reps">3 × 12</span></li>
+          </ul>
+          <p class="label mt-3 mb-2" style="color:var(--cyan)">HOMBROS SALUDABLES</p>
+          <ul class="exercise-list">
+            <li><span>Face pulls con liga/toalla</span><span class="ex-reps">3 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">VIERNES</span>
+          <span class="day-card__focus">FULL BODY FUNCIONAL</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">CIRCUITO (3 rondas, 60 seg descanso entre rondas)</p>
+          <ul class="exercise-list">
+            <li><span>Burpees (sin salto si eres nuevo)</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Sentadillas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">20 seg</span></li>
+            <li><span>Plancha</span><span class="ex-reps">20 seg</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">SÁBADO</span>
+          <span class="day-card__focus" style="color:var(--purple)">CARDIO LIGERO</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote continuo (o caminata rápida)</span><span class="ex-reps">20–25 min</span></li>
+            <li><span>Shadow boxing técnico</span><span class="ex-reps">3 × 2 min</span></li>
+            <li><span>Estiramiento general</span><span class="ex-reps">10 min</span></li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:10px">El objetivo es sudar suavemente, no agotarte. RPE 5/10.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WEEK 2 -->
+  <div id="week-2" class="week-content" style="display:none">
+    <div class="info-box info-box--cyan mb-4">
+      <span class="info-box__icon">📈</span>
+      <div>
+        <p class="info-box__title">SEMANA 2 — PRIMERAS ADAPTACIONES</p>
+        <p class="info-box__text">+2 reps en ejercicios de cuerpo superior. +5 reps en piernas. Aumenta el tiempo de plancha a 25 seg. Si la semana 1 se sintió muy fácil, agrega 1 serie extra a los ejercicios principales.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">PECHO + TRÍCEPS + HOMBRO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Lagartijas</span><span class="ex-reps">3 × 10–12</span></li>
+            <li><span>Dips en silla</span><span class="ex-reps">3 × 12</span></li>
+            <li><span>Pike pushups</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Plancha</span><span class="ex-reps">3 × 25 seg</span></li>
+            <li><span>Retracción escapular</span><span class="ex-reps">2 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">PIERNAS + CORE</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Sentadillas</span><span class="ex-reps">3 × 20</span></li>
+            <li><span>Desplantes</span><span class="ex-reps">3 × 12 c/pierna</span></li>
+            <li><span>Puente glúteos (pausa 2 seg arriba)</span><span class="ex-reps">3 × 20</span></li>
+            <li><span>Leg raises</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Dead bug</span><span class="ex-reps">3 × 10 c/lado</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">MIÉRCOLES</span><span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem">Mismo protocolo de miércoles. Movilidad + caminata. Registra cómo se sienten los músculos.</p>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus">ESPALDA + BÍCEPS</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Superman</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">3 × 12</span></li>
+            <li><span>Dominadas (negativas o asistidas)</span><span class="ex-reps">3 × 6</span></li>
+            <li><span>Plancha lateral</span><span class="ex-reps">2 × 25 seg c/lado</span></li>
+            <li><span>Face pulls</span><span class="ex-reps">3 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus">FULL BODY</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">CIRCUITO (3 rondas)</p>
+          <ul class="exercise-list">
+            <li><span>Burpees</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Sentadillas explosivas</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">25 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">SÁBADO</span><span class="day-card__focus" style="color:var(--purple)">CARDIO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote continuo</span><span class="ex-reps">25–30 min</span></li>
+            <li><span>Shadow boxing técnico</span><span class="ex-reps">3 × 2 min</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 3 -->
+  <div id="week-3" class="week-content" style="display:none">
+    <div class="info-box info-box--orange mb-4">
+      <span class="info-box__icon">🔥</span>
+      <div>
+        <p class="info-box__title">SEMANA 3 — INTENSIFICACIÓN PROGRESIVA</p>
+        <p class="info-box__text">Semana de mayor estímulo. Introduce tempo lento (3 seg bajando, 1 seg arriba) en lagartijas y sentadillas. Aumenta plancha a 30 seg. Esta semana empezarás a sentir los músculos a las 24–48h.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">PECHO + TRÍCEPS</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Lagartijas (tempo 3-1)</span><span class="ex-reps">4 × 10</span></li>
+            <li><span>Dips en silla (pausa 1 seg abajo)</span><span class="ex-reps">3 × 12</span></li>
+            <li><span>Pike pushups</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Lagartijas diamante</span><span class="ex-reps">2 × 8</span></li>
+            <li><span>Plancha</span><span class="ex-reps">3 × 30 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">PIERNAS + CORE</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Sentadillas (tempo 3-1)</span><span class="ex-reps">4 × 20</span></li>
+            <li><span>Bulgarian split squat (intro)</span><span class="ex-reps">3 × 8 c/pierna</span></li>
+            <li><span>Puente glúteos unilateral</span><span class="ex-reps">3 × 12 c/pierna</span></li>
+            <li><span>Leg raises</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Hollow body hold</span><span class="ex-reps">3 × 15 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">MIÉRCOLES</span><span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem">Movilidad + caminata. Si hay dolor muscular fuerte, prioriza el estiramiento sobre la caminata.</p>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus">ESPALDA + BÍCEPS</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Superman (pausa 2 seg arriba)</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Australian pull-ups (tempo 3-1)</span><span class="ex-reps">4 × 12</span></li>
+            <li><span>Dominadas (negativas lentas)</span><span class="ex-reps">3 × 6</span></li>
+            <li><span>Remo con mochila</span><span class="ex-reps">3 × 12</span></li>
+            <li><span>Face pulls</span><span class="ex-reps">3 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus">FULL BODY</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">CIRCUITO (4 rondas)</p>
+          <ul class="exercise-list">
+            <li><span>Burpees</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Sentadillas explosivas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">30 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">SÁBADO</span><span class="day-card__focus" style="color:var(--purple)">CARDIO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote continuo</span><span class="ex-reps">30 min</span></li>
+            <li><span>Shadow boxing + esquivas</span><span class="ex-reps">4 × 2 min</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 4 DELOAD -->
+  <div id="week-4" class="week-content" style="display:none">
+    <div class="info-box info-box--gold mb-4">
+      <span class="info-box__icon">⟳</span>
+      <div>
+        <p class="info-box__title">SEMANA 4 — DELOAD: RECUPERACIÓN SISTÉMICA</p>
+        <p class="info-box__text"><strong>Reduce volumen −40%.</strong> Mismos ejercicios, menos series y reps. El músculo crece durante el descanso, no durante el entreno. Esta semana consolidas todas las adaptaciones de las 3 semanas anteriores. NO saltes el deload.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">PECHO (DELOAD)</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Lagartijas</span><span class="ex-reps">2 × 8</span></li>
+            <li><span>Dips</span><span class="ex-reps">2 × 8</span></li>
+            <li><span>Plancha</span><span class="ex-reps">2 × 20 seg</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gold);margin-top:10px">⟳ Enfoque en técnica, no en volumen</p>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">PIERNAS (DELOAD)</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Sentadillas lentas</span><span class="ex-reps">2 × 12</span></li>
+            <li><span>Desplantes</span><span class="ex-reps">2 × 8 c/pierna</span></li>
+            <li><span>Puente glúteos</span><span class="ex-reps">2 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">MIÉRCOLES</span><span class="day-card__focus" style="color:var(--green)">MOVILIDAD COMPLETA</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem">Sesión completa de 30 min de movilidad y estiramiento. Prioriza caderas, hombros y espalda torácica.</p>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus">ESPALDA (DELOAD)</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Australian pull-ups</span><span class="ex-reps">2 × 10</span></li>
+            <li><span>Superman</span><span class="ex-reps">2 × 12</span></li>
+            <li><span>Face pulls</span><span class="ex-reps">2 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus" style="color:var(--green)">CARDIO SUAVE</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Caminata o trote muy suave</span><span class="ex-reps">30 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">SÁBADO</span><span class="day-card__focus" style="color:var(--text-muted)">DESCANSO TOTAL</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem">Descansa. Come bien. Duerme bien. El cuerpo está sintetizando proteína muscular activamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 5 -->
+  <div id="week-5" class="week-content" style="display:none">
+    <div class="info-box info-box--cyan mb-4">
+      <span class="info-box__icon">⚡</span>
+      <div>
+        <p class="info-box__title">SEMANA 5 — REGRESO INTENSIFICADO</p>
+        <p class="info-box__text">Vuelves más fuerte después del deload. Sube el volumen de semana 3 +10%. Introduces las archer pushups y las sentadillas búlgaras con más profundidad.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">PECHO + TRÍCEPS</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Lagartijas (tempo 3-1)</span><span class="ex-reps">4 × 12</span></li>
+            <li><span>Dips en silla</span><span class="ex-reps">4 × 12</span></li>
+            <li><span>Pike pushups elevados (pies en silla)</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Lagartijas diamante</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Plancha</span><span class="ex-reps">3 × 35 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">PIERNAS + CORE</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Bulgarian split squat</span><span class="ex-reps">4 × 10 c/pierna</span></li>
+            <li><span>Sentadillas explosivas</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Puente glúteos unilateral</span><span class="ex-reps">3 × 15 c/pierna</span></li>
+            <li><span>Leg raises colgado (o en suelo)</span><span class="ex-reps">3 × 12</span></li>
+            <li><span>Hollow body hold</span><span class="ex-reps">3 × 20 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">MIÉRCOLES</span><span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span></div>
+        <div class="day-card__body"><p style="color:var(--text-dim);font-size:0.88rem">Movilidad + caminata. Mismo protocolo.</p></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus">ESPALDA + BÍCEPS</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Dominadas (o máximas negativas)</span><span class="ex-reps">4 × máx</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">4 × 15</span></li>
+            <li><span>Superman</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Face pulls</span><span class="ex-reps">3 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus">FULL BODY</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">CIRCUITO (4 rondas, 45 seg descanso)</p>
+          <ul class="exercise-list">
+            <li><span>Burpees</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Sentadillas explosivas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">30 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">SÁBADO</span><span class="day-card__focus" style="color:var(--purple)">CARDIO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote continuo</span><span class="ex-reps">30–35 min</span></li>
+            <li><span>Shadow boxing</span><span class="ex-reps">4 × 2 min</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 6 -->
+  <div id="week-6" class="week-content" style="display:none">
+    <div class="info-box info-box--red mb-4">
+      <span class="info-box__icon">🏁</span>
+      <div>
+        <p class="info-box__title">SEMANA 6 — SEMANA DE TEST: ¿CUÁNTO HAS AVANZADO?</p>
+        <p class="info-box__text">Al terminar esta semana, haz el TEST DE FASE 1 (ver abajo). Tus números de ahora son la base para la Fase 2. Entrena al 85–90% esta semana para llegar fresco al test.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES–VIERNES</span><span class="day-card__focus">MISMO PROTOCOLO SEM 5</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.9rem">Repite la semana 5 exacta, pero al 85–90% de intensidad. Conserva energía para el test del sábado.</p>
+        </div>
+      </div>
+      <div class="day-card" style="border-color:rgba(240,192,64,0.5)">
+        <div class="day-card__header"><span class="day-card__day">SÁBADO</span><span class="day-card__focus" style="color:var(--gold)">TEST DE FASE 1</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">DESCANSADO, EN ORDEN:</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas máximas (sin parar)</span><span class="ex-reps">1 set máx</span></li>
+            <li><span>Dominadas máximas</span><span class="ex-reps">1 set máx</span></li>
+            <li><span>Plancha isométrica</span><span class="ex-reps">1 set máx seg</span></li>
+            <li><span>Sentadillas en 2 minutos</span><span class="ex-reps">contar total</span></li>
+            <li><span>Trote continuo</span><span class="ex-reps">medir tiempo 2km</span></li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--gold);margin-top:10px">Guarda estos números. Son tu punto de partida para la Fase 2.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDICADORES DE PROGRESO -->
+  <section class="mt-6">
+    <div class="section-header">
+      <span class="section-title">INDICADORES DE PROGRESO — FASE 1</span>
+    </div>
+    <div class="grid-2 stagger">
+      <div class="card">
+        <p class="heading-md mb-3" style="color:var(--green)">✓ LISTO PARA FASE 2 SI:</p>
+        <ul class="exercise-list">
+          <li><span>Lagartijas continuas</span><span class="ex-reps">≥ 20 reps</span></li>
+          <li><span>Dominadas</span><span class="ex-reps">≥ 3 reps limpias</span></li>
+          <li><span>Plancha</span><span class="ex-reps">≥ 45 seg</span></li>
+          <li><span>Sentadillas (2 min)</span><span class="ex-reps">≥ 40 reps</span></li>
+          <li><span>Trote continuo</span><span class="ex-reps">≥ 20 min</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="heading-md mb-3" style="color:var(--red)">⚠ SEÑALES DE ALERTA:</p>
+        <ul class="exercise-list">
+          <li><span>Dolor (no ardor) en codos o muñecas</span><span class="ex-reps">→ parar</span></li>
+          <li><span>Dolor en hombro anterior</span><span class="ex-reps">→ reducir</span></li>
+          <li><span>Fatiga persistente > 48h</span><span class="ex-reps">→ agregar descanso</span></li>
+          <li><span>Insomnio o irritabilidad</span><span class="ex-reps">→ deload urgente</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMER DE DESCANSO -->
+  <section class="mt-6">
+    <div class="section-header">
+      <span class="section-title">TIMER DE DESCANSO</span>
+    </div>
+    <div class="grid-3">
+      <div data-timer="60" data-label="DESCANSO CORTO" data-mode="countdown"></div>
+      <div data-timer="90" data-label="DESCANSO NORMAL" data-mode="countdown"></div>
+      <div data-timer="120" data-label="DESCANSO LARGO" data-mode="countdown"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER NAV -->
+  <div id="footer-nav"></div>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/timers.js"></script>
+<script src="../js/navigation.js"></script>
+<script>
+  function showWeek(num) {
+    document.querySelectorAll('.week-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.week-tab').forEach(el => el.classList.remove('active'));
+    const el = document.getElementById('week-' + num);
+    if (el) { el.style.display = ''; }
+    const tab = document.querySelector(`[data-week="${num}"]`);
+    if (tab) tab.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

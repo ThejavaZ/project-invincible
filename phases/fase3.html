@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="phase" content="3">
+  <title>PROYECTO INVINCIBLE — FASE 3: ENDURANCE FORGE</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/phase.css">
+</head>
+<body class="phase-page">
+
+<nav class="phase-nav">
+  <div class="phase-nav-inner">
+    <a href="../index.html" class="nav-brand">⬡ PROYECTO INVINCIBLE</a>
+    <div class="nav-links">
+      <a href="fase1.html" class="nav-link">F1</a>
+      <a href="fase2.html" class="nav-link">F2</a>
+      <a href="fase3.html" class="nav-link active">F3</a>
+      <a href="fase4.html" class="nav-link">F4</a>
+      <a href="fase5.html" class="nav-link">F5</a>
+      <a href="fase6.html" class="nav-link">F6</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="phase-header">
+    <div class="phase-meta stagger">
+      <span class="phase-number">FASE 03 / 06</span>
+      <span class="badge badge--orange">RESISTENCIA</span>
+      <span class="badge badge--red">CARDIO</span>
+    </div>
+    <h1 class="phase-title" style="color:var(--orange);text-shadow:0 0 20px rgba(255,122,42,0.5)">ENDURANCE FORGE</h1>
+    <p class="phase-subtitle">"El motor que no se apaga. La resistencia es lo que separa al guerrero del espectador."</p>
+    <div class="phase-stats-row stagger">
+      <div class="phase-stat"><span class="phase-stat__value">5</span><span class="phase-stat__label">Semanas</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">5</span><span class="phase-stat__label">Días/Semana</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">50–65</span><span class="phase-stat__label">Min/Sesión</span></div>
+      <div class="phase-stat"><span class="phase-stat__value" style="color:var(--orange)">★★★☆☆</span><span class="phase-stat__label">Dificultad</span></div>
+    </div>
+    <div class="flex gap-3 mt-4">
+      <div class="difficulty-meter" data-difficulty="3"></div>
+      <span class="label" style="margin-top:1px">DIFICULTAD</span>
+    </div>
+  </header>
+
+  <!-- CONTEXTO Y CORRECCIÓN -->
+  <div class="grid-2 mb-6 stagger">
+    <div class="info-box info-box--red">
+      <span class="info-box__icon">⚠️</span>
+      <div>
+        <p class="info-box__title">CORRECCIÓN v1.0 → v2.0</p>
+        <p class="info-box__text">La versión original tenía un "Sábado Murph" (100 lagartijas + 200 sentadillas + 50 dominadas) sin progresión previa. <strong>Eso es una receta para lesión.</strong> Esta versión lo reemplaza con una progresión gradual hacia densidad de trabajo real.</p>
+      </div>
+    </div>
+    <div class="info-box info-box--orange" style="border-left-color:var(--orange);background:linear-gradient(90deg,rgba(255,122,42,0.1),var(--surface))">
+      <span class="info-box__icon">🔥</span>
+      <div>
+        <p class="info-box__title">OBJETIVO</p>
+        <p class="info-box__text">Expandir el motor cardiovascular y construir resistencia muscular real. Circuitos de densidad progresiva, intervalos, y trabajo de larga duración. Al final serás capaz de trabajar duro por 40+ min sin detenerte.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCEPTOS CLAVE -->
+  <section class="mb-6">
+    <div class="section-header"><span class="section-title">CONCEPTOS CLAVE DE ESTA FASE</span></div>
+    <div class="grid-3 stagger">
+      <div class="card">
+        <p class="heading-md mb-2" style="color:var(--orange)">DENSIDAD</p>
+        <p style="font-size:0.85rem;color:var(--text-dim)">Más trabajo en el mismo tiempo. No más reps por serie — menos descanso entre series. Esta es la progresión principal.</p>
+      </div>
+      <div class="card">
+        <p class="heading-md mb-2" style="color:var(--cyan)">ZONA 2</p>
+        <p style="font-size:0.85rem;color:var(--text-dim)">Cardio aeróbico al 60–70% FCM. Puedes hablar frases cortas. Este ritmo construye el motor de base. No todo tiene que ser intenso.</p>
+      </div>
+      <div class="card">
+        <p class="heading-md mb-2" style="color:var(--red)">AMRAP</p>
+        <p style="font-size:0.85rem;color:var(--text-dim)">As Many Rounds As Possible en un tiempo fijo. Compites contra ti mismo. Anota cuántas rondas haces — eso es tu progresión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEK TABS -->
+  <div class="week-tabs">
+    <button class="week-tab active" data-week="1" onclick="showWeek(1)">SEM 1</button>
+    <button class="week-tab" data-week="2" onclick="showWeek(2)">SEM 2</button>
+    <button class="week-tab" data-week="3" onclick="showWeek(3)">SEM 3</button>
+    <button class="week-tab deload" data-week="4" onclick="showWeek(4)">SEM 4 ⟳ DELOAD</button>
+    <button class="week-tab" data-week="5" onclick="showWeek(5)">SEM 5 TEST</button>
+  </div>
+
+  <!-- SEMANA 1 -->
+  <div id="week-1" class="week-content">
+    <div class="info-box info-box--cyan mb-4">
+      <span class="info-box__icon">🌡️</span>
+      <div>
+        <p class="info-box__title">SEMANA 1 — ACLIMATACIÓN A LA RESISTENCIA</p>
+        <p class="info-box__text">Circuitos de 3 rondas. Descanso 60 seg entre rondas. Anota cuánto tardas — eso es tu marca de referencia para las próximas semanas.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">LUNES</span>
+          <span class="day-card__focus">CIRCUITO PUSH-CORE</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--orange)">3 RONDAS · DESCANSO 60 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">30 seg</span></li>
+            <li><span>Dips en silla</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Plancha</span><span class="ex-reps">30 seg</span></li>
+            <li><span>Pike pushups</span><span class="ex-reps">10 reps</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px">Anota el tiempo total de las 3 rondas.</p>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MARTES</span>
+          <span class="day-card__focus">CARDIO ZONA 2</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote continuo (puedes hablar)</span><span class="ex-reps">30 min</span></li>
+            <li><span>Shadow boxing técnico</span><span class="ex-reps">3 × 3 min</span></li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--text-dim);margin-top:10px">Zona 2: si no puedes decir una frase completa, vas muy rápido. Baja el ritmo.</p>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MIÉRCOLES</span>
+          <span class="day-card__focus">CIRCUITO PULL-LEGS</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--orange)">3 RONDAS · DESCANSO 60 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Australian pull-ups</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Sentadillas</span><span class="ex-reps">20 reps</span></li>
+            <li><span>Dominadas</span><span class="ex-reps">máx reps</span></li>
+            <li><span>Desplantes</span><span class="ex-reps">10 c/pierna</span></li>
+            <li><span>Superman</span><span class="ex-reps">15 reps</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card day-card--rest">
+        <div class="day-card__header">
+          <span class="day-card__day">JUEVES</span>
+          <span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Caminata 30 min</span><span class="ex-reps">1×</span></li>
+            <li><span>Movilidad completa</span><span class="ex-reps">20 min</span></li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px">En esta fase la recuperación activa es crítica. No saltarla.</p>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">VIERNES</span>
+          <span class="day-card__focus">CIRCUITO FULL BODY</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">AMRAP 20 MIN</p>
+          <ul class="exercise-list">
+            <li><span>Burpees</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Sentadillas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">8 reps</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--red);margin-top:10px">Cuenta cuántas rondas completas haces en 20 min. Esa es tu marca.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEMANA 2 -->
+  <div id="week-2" class="week-content" style="display:none">
+    <div class="info-box info-box--orange mb-4" style="border-left-color:var(--orange);background:linear-gradient(90deg,rgba(255,122,42,0.1),var(--surface))">
+      <span class="info-box__icon">📈</span>
+      <div>
+        <p class="info-box__title">SEMANA 2 — DENSIDAD +1</p>
+        <p class="info-box__text">Mismos circuitos, descanso reducido a 45 seg entre rondas. Si el AMRAP del viernes pasado fue 4 rondas, apunta a 5 esta semana. El cardio sube a 35 min.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">CIRCUITO PUSH-CORE</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--orange)">4 RONDAS · DESCANSO 45 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">35 seg</span></li>
+            <li><span>Dips en silla</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Plancha</span><span class="ex-reps">35 seg</span></li>
+            <li><span>Pike pushups</span><span class="ex-reps">12 reps</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">CARDIO ZONA 2 + INTERVALOS</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote zona 2</span><span class="ex-reps">25 min</span></li>
+            <li><span>Sprints (30 seg ON / 60 seg OFF)</span><span class="ex-reps">6 rondas</span></li>
+            <li><span>Shadow boxing</span><span class="ex-reps">3 × 3 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MIÉRCOLES</span><span class="day-card__focus">CIRCUITO PULL-LEGS</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--orange)">4 RONDAS · DESCANSO 45 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Australian pull-ups</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Bulgarian split squat</span><span class="ex-reps">8 c/pierna</span></li>
+            <li><span>Dominadas</span><span class="ex-reps">máx reps</span></li>
+            <li><span>Sentadillas explosivas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Superman</span><span class="ex-reps">15 reps</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem">Caminata 30 min + movilidad completa 20 min.</p>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus">AMRAP 22 MIN</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">AMRAP 22 MIN (BEAT LAST WEEK)</p>
+          <ul class="exercise-list">
+            <li><span>Burpees</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Sentadillas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">8 reps</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 3 -->
+  <div id="week-3" class="week-content" style="display:none">
+    <div class="info-box info-box--red mb-4">
+      <span class="info-box__icon">🔥</span>
+      <div>
+        <p class="info-box__title">SEMANA 3 — PICO DE VOLUMEN</p>
+        <p class="info-box__text">Semana más difícil de la fase. 5 rondas en circuitos. AMRAP 25 min. Introduce la "Sesión Larga" del miércoles. No reduzcas el cardio — aquí se construye el motor aeróbico real.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">CIRCUITO PUSH-CORE</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">5 RONDAS · DESCANSO 30 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">40 seg</span></li>
+            <li><span>Dips</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Plancha</span><span class="ex-reps">40 seg</span></li>
+            <li><span>Lagartijas diamante</span><span class="ex-reps">10 reps</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">CARDIO INTERVALOS</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote zona 2</span><span class="ex-reps">20 min</span></li>
+            <li><span>Sprints (40 seg ON / 50 seg OFF)</span><span class="ex-reps">8 rondas</span></li>
+            <li><span>Shadow boxing libre</span><span class="ex-reps">4 × 3 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MIÉRCOLES</span><span class="day-card__focus">SESIÓN LARGA — FULL BODY</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--orange)">FORMATO: 5 BLOQUES DE 5 MIN, DESCANSO 90 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Bloque 1: Lagartijas + Plancha</span><span class="ex-reps">5 min</span></li>
+            <li><span>Bloque 2: Sentadillas + Desplantes</span><span class="ex-reps">5 min</span></li>
+            <li><span>Bloque 3: Australian pull-ups + Superman</span><span class="ex-reps">5 min</span></li>
+            <li><span>Bloque 4: Burpees suaves</span><span class="ex-reps">5 min</span></li>
+            <li><span>Bloque 5: Mountain climbers + Core</span><span class="ex-reps">5 min</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--orange);margin-top:10px">Esta es la "Sesión Larga" — 40 min de trabajo total. Pace sostenible, no sprint.</p>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span></div>
+        <div class="day-card__body"><p style="color:var(--text-dim);font-size:0.88rem">Caminata + movilidad. Esta semana la necesitas más que nunca.</p></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus">AMRAP 25 MIN</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">AMRAP 25 MIN — SUPERA TU MARCA</p>
+          <ul class="exercise-list">
+            <li><span>Burpees</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Sentadillas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">8 reps</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 4 DELOAD -->
+  <div id="week-4" class="week-content" style="display:none">
+    <div class="info-box info-box--gold mb-4">
+      <span class="info-box__icon">⟳</span>
+      <div>
+        <p class="info-box__title">SEMANA 4 — DELOAD DE RESISTENCIA</p>
+        <p class="info-box__text">Reduce el volumen pero <strong>mantén la intensidad en los ejercicios principales</strong>. En resistencia, el deload es diferente: menos rondas, no más lento. El cardio baja a zona 2 suave.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">CIRCUITO LIGERO</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">2 RONDAS · DESCANSO 90 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Sentadillas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Plancha</span><span class="ex-reps">30 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">CARDIO SUAVE</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Trote muy suave / caminata rápida</span><span class="ex-reps">25 min</span></li>
+            <li><span>Shadow boxing suave</span><span class="ex-reps">2 × 2 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">MIÉ–VIE</span><span class="day-card__focus" style="color:var(--green)">MOVILIDAD + DESCANSO</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem">Movilidad 30 min el miércoles. Jueves y viernes descanso total o caminata. Come bien, duerme 8 hrs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 5 TEST -->
+  <div id="week-5" class="week-content" style="display:none">
+    <div class="info-box info-box--red mb-4">
+      <span class="info-box__icon">🏁</span>
+      <div>
+        <p class="info-box__title">SEMANA 5 — TEST FINAL DE RESISTENCIA</p>
+        <p class="info-box__text">Regreso fuerte tras el deload. Lun–Jue: protocolo semana 3. El viernes es el TEST FINAL: AMRAP 30 min. Ese número es tu pasaporte a la Fase 4.</p>
+      </div>
+    </div>
+    <div class="card stagger">
+      <p class="heading-md mb-3" style="color:var(--red)">TEST FINAL — VIERNES</p>
+      <div class="grid-2">
+        <div>
+          <p class="label mb-2" style="color:var(--red)">AMRAP 30 MIN</p>
+          <ul class="exercise-list">
+            <li><span>Burpees</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Sentadillas</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">8 reps</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="info-box info-box--green">
+            <span class="info-box__icon">✓</span>
+            <div>
+              <p class="info-box__title">LISTO PARA FASE 4 SI:</p>
+              <p class="info-box__text">≥ 7 rondas en AMRAP 30 min · Trote continuo ≥ 35 min · Lagartijas seguidas ≥ 30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMERS -->
+  <section class="mt-6">
+    <div class="section-header"><span class="section-title">TIMERS DE TRABAJO</span></div>
+    <div class="grid-3">
+      <div data-timer="1200" data-label="AMRAP 20 MIN" data-mode="countdown"></div>
+      <div data-timer="30" data-label="SPRINT 30 SEG" data-mode="countdown"></div>
+      <div data-timer="60" data-label="DESCANSO 60 SEG" data-mode="countdown"></div>
+    </div>
+  </section>
+
+  <div id="footer-nav"></div>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/timers.js"></script>
+<script src="../js/navigation.js"></script>
+<script>
+  function showWeek(num) {
+    document.querySelectorAll('.week-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.week-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('week-' + num).style.display = '';
+    document.querySelector(`[data-week="${num}"]`).classList.add('active');
+  }
+</script>
+</body>
+</html>

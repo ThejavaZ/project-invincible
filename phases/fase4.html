@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="phase" content="4">
+  <title>PROYECTO INVINCIBLE — FASE 4: WARRIOR PROTOCOL</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/phase.css">
+</head>
+<body class="phase-page">
+
+<nav class="phase-nav">
+  <div class="phase-nav-inner">
+    <a href="../index.html" class="nav-brand">⬡ PROYECTO INVINCIBLE</a>
+    <div class="nav-links">
+      <a href="fase1.html" class="nav-link">F1</a>
+      <a href="fase2.html" class="nav-link">F2</a>
+      <a href="fase3.html" class="nav-link">F3</a>
+      <a href="fase4.html" class="nav-link active">F4</a>
+      <a href="fase5.html" class="nav-link">F5</a>
+      <a href="fase6.html" class="nav-link">F6</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="phase-header">
+    <div class="phase-meta stagger">
+      <span class="phase-number">FASE 04 / 06</span>
+      <span class="badge badge--red">EXPLOSIVIDAD</span>
+      <span class="badge badge--gold">POTENCIA</span>
+    </div>
+    <h1 class="phase-title glow-red">WARRIOR PROTOCOL</h1>
+    <p class="phase-subtitle">"Cada movimiento es un arma. La velocidad hace la fuerza."</p>
+    <div class="phase-stats-row stagger">
+      <div class="phase-stat"><span class="phase-stat__value">5</span><span class="phase-stat__label">Semanas</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">5</span><span class="phase-stat__label">Días/Semana</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">55–65</span><span class="phase-stat__label">Min/Sesión</span></div>
+      <div class="phase-stat"><span class="phase-stat__value" style="color:var(--red)">★★★★☆</span><span class="phase-stat__label">Dificultad</span></div>
+    </div>
+    <div class="flex gap-3 mt-4">
+      <div class="difficulty-meter" data-difficulty="4"></div>
+      <span class="label" style="margin-top:1px">DIFICULTAD</span>
+    </div>
+  </header>
+
+  <!-- CORRECCIÓN Y CONTEXTO -->
+  <div class="grid-2 mb-6 stagger">
+    <div class="info-box info-box--red">
+      <span class="info-box__icon">⚠️</span>
+      <div>
+        <p class="info-box__title">CORRECCIÓN v1.0 → v2.0</p>
+        <p class="info-box__text">La Fase 4 original mezclaba boxeo con fuerza sin estructura. Esta versión separa claramente los días de explosividad, los de shadow boxing técnico, y los de fuerza potente. Cada sesión tiene un objetivo único.</p>
+      </div>
+    </div>
+    <div class="info-box info-box--gold">
+      <span class="info-box__icon">⚡</span>
+      <div>
+        <p class="info-box__title">OBJETIVO</p>
+        <p class="info-box__text">Activar fibras musculares de contracción rápida. Desarrollar potencia reactiva, velocidad de movimiento y acondicionamiento de combate. Al finalizar, cada movimiento será más rápido y potente.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUÍA DE SHADOW BOXING -->
+  <section class="mb-6">
+    <div class="section-header"><span class="section-title">GUÍA DE SHADOW BOXING — NÚMEROS DE GOLPES</span></div>
+    <div class="card stagger">
+      <div class="grid-3" style="gap:8px;margin-bottom:16px">
+        <div style="padding:10px;background:var(--bg2);border-radius:var(--r);text-align:center">
+          <p class="heading-md" style="color:var(--cyan)">1</p>
+          <p class="label">JAB</p>
+        </div>
+        <div style="padding:10px;background:var(--bg2);border-radius:var(--r);text-align:center">
+          <p class="heading-md" style="color:var(--gold)">2</p>
+          <p class="label">CROSS</p>
+        </div>
+        <div style="padding:10px;background:var(--bg2);border-radius:var(--r);text-align:center">
+          <p class="heading-md" style="color:var(--orange)">3</p>
+          <p class="label">HOOK IZQ</p>
+        </div>
+        <div style="padding:10px;background:var(--bg2);border-radius:var(--r);text-align:center">
+          <p class="heading-md" style="color:var(--orange)">4</p>
+          <p class="label">HOOK DER</p>
+        </div>
+        <div style="padding:10px;background:var(--bg2);border-radius:var(--r);text-align:center">
+          <p class="heading-md" style="color:var(--red)">5</p>
+          <p class="label">UPPER IZQ</p>
+        </div>
+        <div style="padding:10px;background:var(--bg2);border-radius:var(--r);text-align:center">
+          <p class="heading-md" style="color:var(--red)">6</p>
+          <p class="label">UPPER DER</p>
+        </div>
+      </div>
+      <div class="info-box info-box--cyan">
+        <span class="info-box__icon">💡</span>
+        <div>
+          <p class="info-box__title">TÉCNICA CLAVE</p>
+          <p class="info-box__text">Rota la cadera en cada golpe — el poder viene de las piernas y la rotación, no del brazo. Mueve los pies siempre. Exhala en cada golpe. Nunca te quedes estático.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEK TABS -->
+  <div class="week-tabs">
+    <button class="week-tab active" data-week="1" onclick="showWeek(1)">SEM 1–2</button>
+    <button class="week-tab" data-week="3" onclick="showWeek(3)">SEM 3</button>
+    <button class="week-tab deload" data-week="4" onclick="showWeek(4)">SEM 4 ⟳ DELOAD</button>
+    <button class="week-tab" data-week="5" onclick="showWeek(5)">SEM 5 TEST</button>
+  </div>
+
+  <!-- SEMANAS 1–2 -->
+  <div id="week-1" class="week-content">
+    <div class="info-box info-box--red mb-4">
+      <span class="info-box__icon">🥊</span>
+      <div>
+        <p class="info-box__title">SEMANAS 1–2: INTRODUCCIÓN A LA POTENCIA</p>
+        <p class="info-box__text">Aprendes los patrones explosivos. La velocidad es el objetivo, pero la técnica viene primero. En lagartijas explosivas: el objetivo es que las manos se despeguen del suelo. Semana 2 = +1 round de boxing.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">LUNES</span>
+          <span class="day-card__focus">EXPLOSIVIDAD UPPER</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">TRABAJO PRINCIPAL (descanso 90 seg)</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas explosivas (manos off suelo)</span><span class="ex-reps">4 × 8</span></li>
+            <li><span>Clap push-ups (aplauso)</span><span class="ex-reps">3 × 6</span></li>
+            <li><span>Dominadas explosivas (subida rápida)</span><span class="ex-reps">4 × 5</span></li>
+            <li><span>Dips explosivos</span><span class="ex-reps">3 × 8</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--cyan)">ACTIVACIÓN MUÑECAS/HOMBROS (SIEMPRE)</p>
+          <ul class="exercise-list">
+            <li><span>Rotación muñecas + extensión dedos</span><span class="ex-reps">2 × 30 seg</span></li>
+            <li><span>Lagartijas de nudillos (knuckle pushups)</span><span class="ex-reps">2 × 10</span></li>
+          </ul>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px">⚠ Si no hay despegue de manos aún, haz lagartijas rápidas normales — la velocidad es lo que importa.</p>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MARTES</span>
+          <span class="day-card__focus">SHADOW BOXING TÉCNICO</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">CALENTAMIENTO (10 min)</p>
+          <ul class="exercise-list">
+            <li><span>Salto cuerda imaginario</span><span class="ex-reps">3 × 3 min</span></li>
+            <li><span>Movimiento de cuello/hombros</span><span class="ex-reps">2 min</span></li>
+          </ul>
+          <p class="label mb-2 mt-2" style="color:var(--red)">ROUNDS (1 min trabajo / 30 seg descanso)</p>
+          <ul class="exercise-list">
+            <li><span>Round 1: Solo jab (1) — perfección</span><span class="ex-reps">3 min</span></li>
+            <li><span>Round 2: Jab + Cross (1-2)</span><span class="ex-reps">3 min</span></li>
+            <li><span>Round 3: 1-2-3 (jab-cross-hook)</span><span class="ex-reps">3 min</span></li>
+            <li><span>Round 4: 1-2-3-2 + esquiva</span><span class="ex-reps">3 min</span></li>
+            <li><span>Round 5: Libre (combina todo)</span><span class="ex-reps">3 min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MIÉRCOLES</span>
+          <span class="day-card__focus">EXPLOSIVIDAD LOWER</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Box jumps (o salto al frente)</span><span class="ex-reps">4 × 10</span></li>
+            <li><span>Sentadillas explosivas con salto</span><span class="ex-reps">4 × 12</span></li>
+            <li><span>Split jumps (desplantes con salto)</span><span class="ex-reps">3 × 8 c/pierna</span></li>
+            <li><span>Sprints en el lugar (máx velocidad)</span><span class="ex-reps">6 × 15 seg / 30 seg off</span></li>
+            <li><span>Hollow body + V-ups</span><span class="ex-reps">3 × 10</span></li>
+          </ul>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px">Aterriza suavemente en box jumps — cuádriceps absorben el impacto, no las rodillas.</p>
+        </div>
+      </div>
+
+      <div class="day-card day-card--rest">
+        <div class="day-card__header">
+          <span class="day-card__day">JUEVES</span>
+          <span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Caminata + trote suave</span><span class="ex-reps">30 min</span></li>
+            <li><span>Movilidad completa</span><span class="ex-reps">20 min</span></li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px">En esta fase la recuperación es especialmente crítica. Las fibras explosivas se dañan más.</p>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">VIERNES</span>
+          <span class="day-card__focus">ACONDICIONAMIENTO DE COMBATE</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">CIRCUITO GUERRERO (4 rondas, 45 seg descanso)</p>
+          <ul class="exercise-list">
+            <li><span>Burpees explosivos</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Lagartijas explosivas</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Sentadillas con salto</span><span class="ex-reps">12 reps</span></li>
+            <li><span>Mountain climbers rápidos</span><span class="ex-reps">30 seg</span></li>
+            <li><span>Shadow boxing máxima velocidad</span><span class="ex-reps">30 seg</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEMANA 3 -->
+  <div id="week-3" class="week-content" style="display:none">
+    <div class="info-box info-box--red mb-4">
+      <span class="info-box__icon">🔥</span>
+      <div>
+        <p class="info-box__title">SEMANA 3 — PICO DE POTENCIA</p>
+        <p class="info-box__text">Máxima intensidad de la fase. Introduce combos de boxing más complejos. El circuito guerrero sube a 5 rondas. Descansos reducidos a 30 seg.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">EXPLOSIVIDAD UPPER AVANZADA</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Clap push-ups</span><span class="ex-reps">4 × 8</span></li>
+            <li><span>Archer pushups explosivos</span><span class="ex-reps">3 × 6 c/lado</span></li>
+            <li><span>Dominadas explosivas</span><span class="ex-reps">4 × 6</span></li>
+            <li><span>Dips explosivos + pausa isométrica</span><span class="ex-reps">3 × 8</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">BOXING AVANZADO</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--gold)">COMBOS DE LA SEMANA</p>
+          <ul class="exercise-list">
+            <li><span>1-1-2 (doble jab + cross)</span><span class="ex-reps">3 min</span></li>
+            <li><span>2-3-2 (cross-hook-cross)</span><span class="ex-reps">3 min</span></li>
+            <li><span>1-2-5-2 (jab-cross-upper-cross)</span><span class="ex-reps">3 min</span></li>
+            <li><span>1-2-3-slip-2 (slip = esquiva)</span><span class="ex-reps">3 min</span></li>
+            <li><span>Libre máxima intensidad</span><span class="ex-reps">3 min</span></li>
+            <li><span>Cooldown técnico</span><span class="ex-reps">2 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MIÉRCOLES</span><span class="day-card__focus">EXPLOSIVIDAD LOWER AVANZADA</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Box jumps (máxima altura)</span><span class="ex-reps">5 × 8</span></li>
+            <li><span>Split jumps</span><span class="ex-reps">4 × 10 c/pierna</span></li>
+            <li><span>Sprints 20 seg ON / 20 seg OFF</span><span class="ex-reps">8 rondas</span></li>
+            <li><span>Hollow body → V-ups → Tuck jumps</span><span class="ex-reps">3 × 10 c/u</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN ACTIVA</span></div>
+        <div class="day-card__body"><p style="color:var(--text-dim);font-size:0.88rem">Movilidad + caminata. Prioriza hombros y rodillas esta semana.</p></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus">CIRCUITO GUERRERO × 5</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">5 RONDAS · DESCANSO 30 SEG</p>
+          <ul class="exercise-list">
+            <li><span>Burpees explosivos</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Clap push-ups</span><span class="ex-reps">6 reps</span></li>
+            <li><span>Sentadillas con salto</span><span class="ex-reps">15 reps</span></li>
+            <li><span>Mountain climbers rápidos</span><span class="ex-reps">30 seg</span></li>
+            <li><span>Shadow boxing explosivo</span><span class="ex-reps">30 seg</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELOAD SEM 4 -->
+  <div id="week-4" class="week-content" style="display:none">
+    <div class="info-box info-box--gold mb-4">
+      <span class="info-box__icon">⟳</span>
+      <div>
+        <p class="info-box__title">SEMANA 4 — DELOAD</p>
+        <p class="info-box__text">Las fibras explosivas son las que más necesitan recuperación. Esta semana es técnica pura — sin explosividad máxima. Shadow boxing al 60% de intensidad. Sin sprints.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUN / MIÉ</span><span class="day-card__focus">TÉCNICA PURA</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Lagartijas lentas (técnica)</span><span class="ex-reps">2 × 10</span></li>
+            <li><span>Sentadillas lentas</span><span class="ex-reps">2 × 15</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">2 × 10</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MAR</span><span class="day-card__focus">BOXING 60% INTENSIDAD</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Shadow boxing técnico muy lento</span><span class="ex-reps">3 × 3 min</span></li>
+            <li><span>Enfócate en la cadera y los pies</span><span class="ex-reps">—</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">JUE – VIE</span><span class="day-card__focus" style="color:var(--text-muted)">DESCANSO TOTAL</span></div>
+        <div class="day-card__body"><p style="color:var(--text-dim);font-size:0.88rem">Come bien. Duerme. Los músculos explosivos se reconstruyen.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 5 TEST -->
+  <div id="week-5" class="week-content" style="display:none">
+    <div class="info-box info-box--red mb-4">
+      <span class="info-box__icon">🏁</span>
+      <div>
+        <p class="info-box__title">SEMANA 5 — TEST DE POTENCIA</p>
+        <p class="info-box__text">Lun–Jue: protocolo semana 3. El viernes es el Test de Potencia. Con 22 semanas de entrenamiento acumulado, tus números deberían ser significativamente mejores que la Fase 1.</p>
+      </div>
+    </div>
+    <div class="card stagger">
+      <p class="heading-md glow-red mb-3">TEST DE POTENCIA — VIERNES</p>
+      <ul class="exercise-list">
+        <li><span>Lagartijas explosivas (máx en 60 seg)</span><span class="ex-reps">1 set</span></li>
+        <li><span>Burpees (máx en 2 min)</span><span class="ex-reps">1 set</span></li>
+        <li><span>Sentadillas con salto (máx en 60 seg)</span><span class="ex-reps">1 set</span></li>
+        <li><span>Dominadas (máx limpio)</span><span class="ex-reps">1 set</span></li>
+        <li><span>Shadow boxing 3 rounds a máxima intensidad</span><span class="ex-reps">3 × 2 min</span></li>
+      </ul>
+      <div class="info-box info-box--green mt-4">
+        <span class="info-box__icon">✓</span>
+        <div>
+          <p class="info-box__title">LISTO PARA FASE 5 SI:</p>
+          <p class="info-box__text">Clap push-ups ≥ 5 reps · Dominadas ≥ 8 reps · Burpees 2 min ≥ 20 reps · Salto vertical visiblemente mejorado</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMERS -->
+  <section class="mt-6">
+    <div class="section-header"><span class="section-title">TIMERS DE ROUNDS</span></div>
+    <div class="grid-3">
+      <div data-timer="180" data-label="ROUND 3 MIN" data-mode="countdown"></div>
+      <div data-timer="30" data-label="DESCANSO ROUND" data-mode="countdown"></div>
+      <div data-timer="20" data-label="SPRINT 20 SEG" data-mode="countdown"></div>
+    </div>
+  </section>
+
+  <div id="footer-nav"></div>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/timers.js"></script>
+<script src="../js/navigation.js"></script>
+<script>
+  function showWeek(num) {
+    document.querySelectorAll('.week-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.week-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('week-' + num).style.display = '';
+    document.querySelector(`[data-week="${num}"]`).classList.add('active');
+  }
+</script>
+</body>
+</html>

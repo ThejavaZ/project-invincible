@@ -1,0 +1,118 @@
+/* ─── KEYFRAMES ─── */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--cyan-glow); }
+  50%       { box-shadow: 0 0 20px var(--cyan-glow), 0 0 40px rgba(0,212,255,0.2); }
+}
+
+@keyframes pulse-text {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes scanline-move {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(100vh); }
+}
+
+@keyframes glitch {
+  0%   { transform: none; }
+  20%  { transform: skew(-1deg) translate(-2px, 0); }
+  40%  { transform: none; }
+  60%  { transform: skew(1deg) translate(2px, 0); }
+  80%  { transform: none; }
+  100% { transform: none; }
+}
+
+@keyframes border-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes number-tick {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bar-fill {
+  from { width: 0; }
+}
+
+/* ─── ANIMATION CLASSES ─── */
+.anim-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.anim-fade-in-left {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+
+/* Staggered children */
+.stagger > * {
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+.stagger > *:nth-child(1)  { animation-delay: 0.05s; }
+.stagger > *:nth-child(2)  { animation-delay: 0.10s; }
+.stagger > *:nth-child(3)  { animation-delay: 0.15s; }
+.stagger > *:nth-child(4)  { animation-delay: 0.20s; }
+.stagger > *:nth-child(5)  { animation-delay: 0.25s; }
+.stagger > *:nth-child(6)  { animation-delay: 0.30s; }
+.stagger > *:nth-child(7)  { animation-delay: 0.35s; }
+.stagger > *:nth-child(8)  { animation-delay: 0.40s; }
+
+/* Glow pulse on element */
+.pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Text blink */
+.blink {
+  animation: pulse-text 1.2s ease-in-out infinite;
+}
+
+/* Glitch effect */
+.glitch:hover {
+  animation: glitch 0.3s ease;
+}
+
+/* Progress bar animation */
+.bar-animate .progress-bar__fill {
+  animation: bar-fill 1.2s ease forwards;
+}
+
+/* Card entrance */
+.card-enter {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ─── CORNER DECORATION ─── */
+.corner-tl,
+.corner-tr,
+.corner-bl,
+.corner-br {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+.corner-tl { top: 0;  left: 0;  border-top: 2px solid var(--cyan); border-left: 2px solid var(--cyan); }
+.corner-tr { top: 0;  right: 0; border-top: 2px solid var(--cyan); border-right: 2px solid var(--cyan); }
+.corner-bl { bottom: 0; left: 0;  border-bottom: 2px solid var(--cyan); border-left: 2px solid var(--cyan); }
+.corner-br { bottom: 0; right: 0; border-bottom: 2px solid var(--cyan); border-right: 2px solid var(--cyan); }
+
+/* ─── FLICKER ON HOVER ─── */
+.flicker:hover {
+  animation: pulse-text 0.1s step-end 3;
+}

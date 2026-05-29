@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROYECTO INVINCIBLE — DASHBOARD</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <style>
+    /* Inline extras */
+    .hero-logo-line {
+      width: 2px; height: 60px;
+      background: linear-gradient(180deg, var(--cyan), transparent);
+      margin: 0 auto 20px;
+    }
+    .analysis-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--text-muted); padding: 4px 10px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+    .analysis-chip.warn { color: var(--gold); border-color: rgba(240,192,64,0.3); }
+    .analysis-chip.ok   { color: var(--green); border-color: rgba(0,255,136,0.3); }
+    .analysis-chip.crit { color: var(--red);   border-color: rgba(255,60,90,0.3); }
+  </style>
+</head>
+<body class="dashboard">
+
+<!-- NAV -->
+<nav class="phase-nav">
+  <div class="phase-nav-inner">
+    <span class="nav-brand">⬡ PROYECTO INVINCIBLE</span>
+    <div class="nav-links">
+      <a href="phases/fase1.html" class="nav-link">F1</a>
+      <a href="phases/fase2.html" class="nav-link">F2</a>
+      <a href="phases/fase3.html" class="nav-link">F3</a>
+      <a href="phases/fase4.html" class="nav-link">F4</a>
+      <a href="phases/fase5.html" class="nav-link">F5</a>
+      <a href="phases/fase6.html" class="nav-link">F6</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__accent"></div>
+    <p class="hero__system-id">SISTEMA DE ENTRENAMIENTO v2.0 // HERMOSILLO UNIT</p>
+    <h1 class="hero__title stagger">
+      <span class="glow-cyan">PROYECTO</span>
+      <span style="color:var(--text)">INVINCIBLE</span>
+    </h1>
+    <p class="hero__subtitle">Sistema de entrenamiento progresivo de 12 meses. Calistenia · Movilidad · Fuerza · Control corporal.</p>
+    <div class="hero__cta">
+      <a href="phases/fase1.html" class="btn btn--cyan pulse-glow">▶ INICIAR FASE 1</a>
+      <button class="btn btn--gold" onclick="document.getElementById('phases-section').scrollIntoView({behavior:'smooth'})">◈ VER FASES</button>
+    </div>
+  </section>
+
+  <!-- STAT CARDS -->
+  <div class="stats-row stagger">
+    <div class="stat-card">
+      <div class="stat-card__icon">📅</div>
+      <div class="stat-card__value" data-count="32">0</div>
+      <div class="stat-card__label">Semanas Totales</div>
+      <div class="stat-card__bar" style="width:100%"></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__icon">🏋️</div>
+      <div class="stat-card__value" data-count="6">0</div>
+      <div class="stat-card__label">Fases</div>
+      <div class="stat-card__bar" style="width:100%; background:var(--gold)"></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__icon">🔥</div>
+      <div class="stat-card__value" data-count="5">0</div>
+      <div class="stat-card__label">Días/Semana</div>
+      <div class="stat-card__bar" style="width:83%; background:var(--orange)"></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__icon">💪</div>
+      <div class="stat-card__value glow-cyan" id="days-elapsed">0</div>
+      <div class="stat-card__label">Días Activo</div>
+      <div class="stat-card__bar" id="days-bar" style="width:0%; background:var(--green); transition:width 1.5s ease"></div>
+    </div>
+  </div>
+
+  <!-- ANÁLISIS DE FASES ORIGINALES -->
+  <section class="mb-6">
+    <div class="section-header mb-4">
+      <span class="section-title">ANÁLISIS DEL SISTEMA ORIGINAL</span>
+    </div>
+    <div class="card card--gold mb-4">
+      <p class="label mb-2">DIAGNÓSTICO v1.0 → CORRECCIONES APLICADAS</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" class="stagger">
+        <span class="analysis-chip crit">⚠ "4xFallo" en principiantes → riesgo articular</span>
+        <span class="analysis-chip crit">⚠ Pseudo planche en semana 2 → demasiado avanzado</span>
+        <span class="analysis-chip crit">⚠ Murph sin progresión → lesión garantizada</span>
+        <span class="analysis-chip warn">↑ Sin semanas de deload programadas</span>
+        <span class="analysis-chip warn">↑ Sin calentamiento sistemático</span>
+        <span class="analysis-chip warn">↑ Movilidad aislada (debería ser transversal)</span>
+        <span class="analysis-chip warn">↑ Sin ejercicios anti-oficina</span>
+        <span class="analysis-chip ok">✓ Estética visual sólida conservada</span>
+        <span class="analysis-chip ok">✓ Narrativa gamificada mantenida</span>
+        <span class="analysis-chip ok">✓ Ejercicios base correctos</span>
+      </div>
+      <div class="info-box info-box--gold">
+        <span class="info-box__icon">⚡</span>
+        <div>
+          <p class="info-box__title">CORRECCIONES APLICADAS</p>
+          <p class="info-box__text">Se restructuró la progresión con periodización real: ondulación semanal, semanas de deload en semana 4 o 5 de cada fase, calentamiento integrado, movilidad diaria, y ejercicios anti-office para programadores. Se eliminaron los "x Fallo" sin base y se reemplazaron con cargas medibles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FASES -->
+  <section id="phases-section">
+    <div class="section-header mb-4">
+      <span class="section-title">FASES DEL SISTEMA</span>
+    </div>
+
+    <div class="phases-grid stagger">
+
+      <a href="phases/fase1.html" class="phase-card phase-card--active" data-color="cyan">
+        <div class="corner-tl"></div><div class="corner-br"></div>
+        <p class="phase-card__num">FASE 01 · 6 SEMANAS</p>
+        <h3 class="phase-card__name glow-cyan">IGNITION PROTOCOL</h3>
+        <p class="phase-card__desc">Activación del sistema. Despertar muscular, corrección postural y construcción de hábitos. Base sólida para todo lo que sigue.</p>
+        <div class="mb-3">
+          <div class="difficulty-meter" data-difficulty="2"></div>
+        </div>
+        <div class="progress-bar"><div class="progress-bar__fill" data-width="0"></div></div>
+        <div class="phase-card__footer">
+          <span class="phase-card__duration mono">5 días/semana</span>
+          <span class="phase-card__status glow-cyan">▶ ACTIVA</span>
+        </div>
+      </a>
+
+      <a href="phases/fase2.html" class="phase-card" data-color="gold">
+        <p class="phase-card__num">FASE 02 · 6 SEMANAS</p>
+        <h3 class="phase-card__name glow-gold">STRUCTURAL BUILD</h3>
+        <p class="phase-card__desc">Construcción de masa muscular funcional. Push/Pull/Legs con progresión de tiempo bajo tensión y volumen controlado.</p>
+        <div class="mb-3">
+          <div class="difficulty-meter" data-difficulty="3"></div>
+        </div>
+        <div class="progress-bar"><div class="progress-bar__fill" data-width="0" style="background:var(--gold)"></div></div>
+        <div class="phase-card__footer">
+          <span class="phase-card__duration mono">5 días/semana</span>
+          <span class="phase-card__status" style="color:var(--text-muted)">🔒 SIGUIENTE</span>
+        </div>
+      </a>
+
+      <a href="phases/fase3.html" class="phase-card" data-color="orange">
+        <p class="phase-card__num">FASE 03 · 5 SEMANAS</p>
+        <h3 class="phase-card__name" style="color:var(--orange)">ENDURANCE FORGE</h3>
+        <p class="phase-card__desc">Motor cardiovascular. Circuitos de densidad, tiempo bajo tensión continuo, y construcción de capacidad aeróbica real.</p>
+        <div class="mb-3">
+          <div class="difficulty-meter" data-difficulty="3"></div>
+        </div>
+        <div class="progress-bar"><div class="progress-bar__fill" data-width="0" style="background:var(--orange)"></div></div>
+        <div class="phase-card__footer">
+          <span class="phase-card__duration mono">5 días/semana</span>
+          <span class="phase-card__status" style="color:var(--text-muted)">🔒 BLOQUEADA</span>
+        </div>
+      </a>
+
+      <a href="phases/fase4.html" class="phase-card" data-color="red">
+        <p class="phase-card__num">FASE 04 · 5 SEMANAS</p>
+        <h3 class="phase-card__name glow-red">WARRIOR PROTOCOL</h3>
+        <p class="phase-card__desc">Explosividad y potencia. Fibras de contracción rápida, shadow boxing estructurado, y acondicionamiento de combate.</p>
+        <div class="mb-3">
+          <div class="difficulty-meter" data-difficulty="4"></div>
+        </div>
+        <div class="progress-bar"><div class="progress-bar__fill" data-width="0" style="background:var(--red)"></div></div>
+        <div class="phase-card__footer">
+          <span class="phase-card__duration mono">5 días/semana</span>
+          <span class="phase-card__status" style="color:var(--text-muted)">🔒 BLOQUEADA</span>
+        </div>
+      </a>
+
+      <a href="phases/fase5.html" class="phase-card" data-color="green">
+        <p class="phase-card__num">FASE 05 · 4 SEMANAS</p>
+        <h3 class="phase-card__name glow-green">FLUID DYNAMICS</h3>
+        <p class="phase-card__desc">Movilidad avanzada y recuperación activa. ROM profundo, articulaciones saludables, y preparación para calistenia de habilidad.</p>
+        <div class="mb-3">
+          <div class="difficulty-meter" data-difficulty="2"></div>
+        </div>
+        <div class="progress-bar"><div class="progress-bar__fill" data-width="0" style="background:var(--green)"></div></div>
+        <div class="phase-card__footer">
+          <span class="phase-card__duration mono">5 días/semana</span>
+          <span class="phase-card__status" style="color:var(--text-muted)">🔒 BLOQUEADA</span>
+        </div>
+      </a>
+
+      <a href="phases/fase6.html" class="phase-card" data-color="purple">
+        <p class="phase-card__num">FASE 06 · 6 SEMANAS</p>
+        <h3 class="phase-card__name" style="color:var(--purple)">ULTRA INSTINCT</h3>
+        <p class="phase-card__desc">Control total del cuerpo. Calistenia de habilidad, equilibrio avanzado, y preparación para entrenamiento con pesas. Nivel Viltrumita.</p>
+        <div class="mb-3">
+          <div class="difficulty-meter" data-difficulty="5"></div>
+        </div>
+        <div class="progress-bar"><div class="progress-bar__fill" data-width="0" style="background:var(--purple)"></div></div>
+        <div class="phase-card__footer">
+          <span class="phase-card__duration mono">5 días/semana</span>
+          <span class="phase-card__status" style="color:var(--text-muted)">🔒 BLOQUEADA</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- TIMELINE DEL AÑO -->
+  <section class="mt-6">
+    <div class="section-header mb-4">
+      <span class="section-title">ROADMAP ANUAL</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="timeline stagger">
+          <div class="timeline-item active">
+            <div class="timeline-item__name glow-cyan">Fase 1: Ignition Protocol</div>
+            <div class="timeline-item__weeks">Semanas 1–6 · Adaptación Base</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item__name">Fase 2: Structural Build</div>
+            <div class="timeline-item__weeks">Semanas 7–12 · Fuerza e Hipertrofia</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item__name">Fase 3: Endurance Forge</div>
+            <div class="timeline-item__weeks">Semanas 13–17 · Resistencia Cardiovascular</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item__name">Fase 4: Warrior Protocol</div>
+            <div class="timeline-item__weeks">Semanas 18–22 · Explosividad</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item__name">Fase 5: Fluid Dynamics</div>
+            <div class="timeline-item__weeks">Semanas 23–26 · Movilidad Avanzada</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item__name">Fase 6: Ultra Instinct</div>
+            <div class="timeline-item__weeks">Semanas 27–32 · Control Total</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Principios del sistema -->
+      <div class="flex-col gap-3">
+        <div class="info-box info-box--cyan">
+          <span class="info-box__icon">📐</span>
+          <div>
+            <p class="info-box__title">PERIODIZACIÓN</p>
+            <p class="info-box__text">Semana 4 o 5 de cada fase = deload (volumen −40%). Progresión no-lineal: ondulación de intensidad dentro de cada bloque.</p>
+          </div>
+        </div>
+        <div class="info-box info-box--gold">
+          <span class="info-box__icon">🖥️</span>
+          <div>
+            <p class="info-box__title">MODO PROGRAMADOR</p>
+            <p class="info-box__text">Cada sesión incluye activación anti-office: movilidad de cuello, hombros, cadena posterior y cadera antes del trabajo principal.</p>
+          </div>
+        </div>
+        <div class="info-box info-box--green">
+          <span class="info-box__icon">⚖️</span>
+          <div>
+            <p class="info-box__title">BALANCE PUSH/PULL</p>
+            <p class="info-box__text">Ratio 1:1 push/pull en todas las fases. Hombros protegidos con trabajo de rotador manguito en cada sesión de empuje.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIMENTACIÓN BÁSICA -->
+  <section class="mt-6">
+    <div class="section-header mb-4">
+      <span class="section-title">PROTOCOLO DE ALIMENTACIÓN</span>
+    </div>
+    <div class="card stagger">
+      <p class="label mb-3">MODO GYMBRO ECONÓMICO · HERMOSILLO EDITION</p>
+      <div class="grid-3" style="gap:12px">
+        <div class="card" style="background:var(--bg2)">
+          <p class="heading-md glow-cyan mb-2">🌅 MAÑANA</p>
+          <p style="font-size:0.85rem;color:var(--text-dim)">Avena con plátano y cacahuate (o leche). Café negro. Huevo si es posible. Alto en carbohidratos lentos.</p>
+        </div>
+        <div class="card" style="background:var(--bg2)">
+          <p class="heading-md glow-gold mb-2">☀️ PRE-ENTRENAMIENTO</p>
+          <p style="font-size:0.85rem;color:var(--text-dim)">Fruta (plátano/manzana) 30–45 min antes. Pan integral o tortilla con frijoles si el entrenamiento es largo.</p>
+        </div>
+        <div class="card" style="background:var(--bg2)">
+          <p class="heading-md glow-green mb-2">🌙 POST-ENTRENAMIENTO</p>
+          <p style="font-size:0.85rem;color:var(--text-dim)">Proteína + carbohidrato dentro de 60 min. Huevo + arroz, frijoles + tortilla, atún + pan. Económico y efectivo.</p>
+        </div>
+      </div>
+      <div class="info-box info-box--cyan mt-4">
+        <span class="info-box__icon">💧</span>
+        <div>
+          <p class="info-box__title">HIDRATACIÓN (HERMOSILLO HEAT MODE)</p>
+          <p class="info-box__text">Mínimo 3L de agua/día en verano. Añade sal de mesa o suero oral si sudan mucho. El calor de Hermosillo eleva los requerimientos hídricos ~30% respecto a climas templados. No esperes tener sed para tomar agua.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/app.js"></script>
+<script>
+  // Update days elapsed display
+  document.addEventListener('DOMContentLoaded', () => {
+    const data = PROGRESS_COMPAT_load();
+    const el = document.getElementById('days-elapsed');
+    const bar = document.getElementById('days-bar');
+    if (data && data.startDate) {
+      const days = Math.floor((Date.now() - new Date(data.startDate).getTime()) / 86400000);
+      if (el) el.textContent = days;
+      if (bar) bar.style.width = Math.min(100, (days / 224) * 100) + '%';
+    }
+  });
+
+  // Simple compat function (progress.js may not be loaded on index)
+  function PROGRESS_COMPAT_load() {
+    try { return JSON.parse(localStorage.getItem('pi_progress')) || {}; } catch { return {}; }
+  }
+</script>
+
+</body>
+</html>

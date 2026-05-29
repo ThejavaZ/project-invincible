@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="phase" content="6">
+  <title>PROYECTO INVINCIBLE — FASE 6: ULTRA INSTINCT</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/phase.css">
+  <style>
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r2);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .skill-card__level {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+    .skill-pip {
+      width: 20px; height: 4px;
+      border-radius: 2px;
+      background: var(--border);
+    }
+    .skill-pip.active { background: var(--purple); box-shadow: 0 0 6px rgba(168,85,247,0.5); }
+    .req-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      background: rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.3);
+      border-radius: 20px;
+      color: var(--purple);
+      margin: 2px;
+    }
+  </style>
+</head>
+<body class="phase-page">
+
+<nav class="phase-nav">
+  <div class="phase-nav-inner">
+    <a href="../index.html" class="nav-brand">⬡ PROYECTO INVINCIBLE</a>
+    <div class="nav-links">
+      <a href="fase1.html" class="nav-link">F1</a>
+      <a href="fase2.html" class="nav-link">F2</a>
+      <a href="fase3.html" class="nav-link">F3</a>
+      <a href="fase4.html" class="nav-link">F4</a>
+      <a href="fase5.html" class="nav-link">F5</a>
+      <a href="fase6.html" class="nav-link active">F6</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="phase-header">
+    <div class="phase-meta stagger">
+      <span class="phase-number">FASE 06 / 06</span>
+      <span class="badge badge--purple">CONTROL TOTAL</span>
+      <span class="badge badge--gold">AVANZADO</span>
+    </div>
+    <h1 class="phase-title" style="color:var(--purple);text-shadow:0 0 30px rgba(168,85,247,0.6)">ULTRA INSTINCT</h1>
+    <p class="phase-subtitle">"El cuerpo actúa antes que la mente lo ordene. Nivel Viltrumita confirmado."</p>
+    <div class="phase-stats-row stagger">
+      <div class="phase-stat"><span class="phase-stat__value">6</span><span class="phase-stat__label">Semanas</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">5</span><span class="phase-stat__label">Días/Semana</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">60–75</span><span class="phase-stat__label">Min/Sesión</span></div>
+      <div class="phase-stat"><span class="phase-stat__value" style="color:var(--purple)">★★★★★</span><span class="phase-stat__label">Dificultad</span></div>
+    </div>
+    <div class="flex gap-3 mt-4">
+      <div class="difficulty-meter" data-difficulty="5"></div>
+      <span class="label" style="margin-top:1px">DIFICULTAD MÁXIMA</span>
+    </div>
+  </header>
+
+  <!-- CONTEXTO FINAL -->
+  <div class="card mb-6 stagger" style="border-color:rgba(168,85,247,0.4);background:linear-gradient(135deg,rgba(168,85,247,0.05),var(--surface))">
+    <p class="label mb-2" style="color:var(--purple)">ESTADO DEL SISTEMA — SEMANA 27</p>
+    <p style="font-size:0.95rem;color:var(--text);line-height:1.7;margin-bottom:16px">
+      Llegas a esta fase con <strong>26 semanas de entrenamiento progresivo</strong> acumulado. Tu sistema cardiovascular, musculoesquelético y nervioso están adaptados a un nivel que hace 6 meses era imposible. Esta fase capitaliza todo ese trabajo y lo convierte en <strong>habilidades de cuerpo real</strong>: pistol squat, muscle-up progresivo, handstand contra pared, planche lean, y propiocepción de combate.
+    </p>
+    <div class="info-box info-box--gold">
+      <span class="info-box__icon">🎯</span>
+      <div>
+        <p class="info-box__title">AL TERMINAR ESTA FASE TENDRÁS</p>
+        <p class="info-box__text">Control corporal completo · Calistenia de habilidad básica · Base para gimnasio con pesas · Sistema nervioso entrenado · Articulaciones saludables · Cuerpo funcional real</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HABILIDADES A DESARROLLAR -->
+  <section class="mb-6">
+    <div class="section-header"><span class="section-title">ÁRBOL DE HABILIDADES — FASE 6</span></div>
+    <div class="grid-auto stagger">
+
+      <div class="skill-card">
+        <div class="skill-card__level">
+          <div class="skill-pip active"></div><div class="skill-pip active"></div>
+          <div class="skill-pip active"></div><div class="skill-pip"></div><div class="skill-pip"></div>
+        </div>
+        <p class="heading-md mb-1" style="color:var(--purple)">PISTOL SQUAT</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px">Sentadilla a una pierna completa. El rey de la fuerza unilateral.</p>
+        <p class="label mb-2">PRE-REQUISITOS:</p>
+        <div><span class="req-tag">Bulgarian split squat × 15</span><span class="req-tag">Equilibrio en 1 pierna 30 seg</span></div>
+        <p class="label mt-3 mb-2">PROGRESIÓN:</p>
+        <ol style="font-size:0.82rem;color:var(--text-dim);padding-left:16px;line-height:2">
+          <li>Pistol asistido (toalla/poste)</li>
+          <li>Pistol a silla baja</li>
+          <li>Pistol excéntrico (negativo)</li>
+          <li>Pistol completo</li>
+        </ol>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__level">
+          <div class="skill-pip active"></div><div class="skill-pip active"></div>
+          <div class="skill-pip active"></div><div class="skill-pip active"></div><div class="skill-pip"></div>
+        </div>
+        <p class="heading-md mb-1" style="color:var(--purple)">MUSCLE-UP (ASISTIDO)</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px">Transición dominada → dip. El movimiento de élite de calistenia.</p>
+        <p class="label mb-2">PRE-REQUISITOS:</p>
+        <div><span class="req-tag">10 dominadas limpias</span><span class="req-tag">10 dips limpios</span></div>
+        <p class="label mt-3 mb-2">PROGRESIÓN:</p>
+        <ol style="font-size:0.82rem;color:var(--text-dim);padding-left:16px;line-height:2">
+          <li>Dominadas con agarre neutro explosivas</li>
+          <li>Transición sobre barra (con salto)</li>
+          <li>Muscle-up asistido (banda elástica)</li>
+          <li>Muscle-up completo (objetivo largo plazo)</li>
+        </ol>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__level">
+          <div class="skill-pip active"></div><div class="skill-pip active"></div>
+          <div class="skill-pip"></div><div class="skill-pip"></div><div class="skill-pip"></div>
+        </div>
+        <p class="heading-md mb-1" style="color:var(--purple)">HANDSTAND (CONTRA PARED)</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px">Fuerza de hombros, balance y control invertido.</p>
+        <p class="label mb-2">PRE-REQUISITOS:</p>
+        <div><span class="req-tag">Pike pushups × 15</span><span class="req-tag">Hollow body 30 seg</span></div>
+        <p class="label mt-3 mb-2">PROGRESIÓN:</p>
+        <ol style="font-size:0.82rem;color:var(--text-dim);padding-left:16px;line-height:2">
+          <li>Kick-up a pared (cara a la pared)</li>
+          <li>Hold 10 seg contra pared</li>
+          <li>Hold 30 seg con alineación</li>
+          <li>Shoulder taps en handstand</li>
+        </ol>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__level">
+          <div class="skill-pip active"></div><div class="skill-pip active"></div>
+          <div class="skill-pip active"></div><div class="skill-pip"></div><div class="skill-pip"></div>
+        </div>
+        <p class="heading-md mb-1" style="color:var(--purple)">L-SIT COMPLETO</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px">Isométrico de core + compresión de cadera. Fundamento de todo lo avanzado.</p>
+        <p class="label mb-2">PRE-REQUISITOS:</p>
+        <div><span class="req-tag">L-sit piernas dobladas 20 seg</span></div>
+        <p class="label mt-3 mb-2">PROGRESIÓN:</p>
+        <ol style="font-size:0.82rem;color:var(--text-dim);padding-left:16px;line-height:2">
+          <li>L-sit una pierna estirada</li>
+          <li>L-sit ambas estiradas 5 seg</li>
+          <li>L-sit 15 seg</li>
+          <li>L-sit 30 seg (objetivo fase)</li>
+        </ol>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__level">
+          <div class="skill-pip active"></div><div class="skill-pip active"></div>
+          <div class="skill-pip active"></div><div class="skill-pip active"></div><div class="skill-pip"></div>
+        </div>
+        <p class="heading-md mb-1" style="color:var(--purple)">CROW POSE → PLANCHE LEAN</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px">Control de peso en manos. Base del planche completo (meses de trabajo).</p>
+        <p class="label mb-2">PRE-REQUISITOS:</p>
+        <div><span class="req-tag">Crow pose 20 seg</span><span class="req-tag">Wrist conditioning</span></div>
+        <p class="label mt-3 mb-2">PROGRESIÓN:</p>
+        <ol style="font-size:0.82rem;color:var(--text-dim);padding-left:16px;line-height:2">
+          <li>Crow pose 30 seg sólido</li>
+          <li>Planche lean (inclinación hacia adelante)</li>
+          <li>Tuck planche 5 seg</li>
+          <li>Tuck planche 15 seg (objetivo fase)</li>
+        </ol>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__level">
+          <div class="skill-pip active"></div><div class="skill-pip active"></div>
+          <div class="skill-pip active"></div><div class="skill-pip"></div><div class="skill-pip"></div>
+        </div>
+        <p class="heading-md mb-1" style="color:var(--cyan)">PROPIOCEPCIÓN + REFLEJOS</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:10px">El cuerpo responde antes que el pensamiento consciente.</p>
+        <p class="label mt-3 mb-2">TRABAJO:</p>
+        <ul style="font-size:0.82rem;color:var(--text-dim);padding-left:16px;line-height:2;list-style:disc">
+          <li>Equilibrio en superficie inestable</li>
+          <li>Sprints con cambios de dirección</li>
+          <li>Shadow boxing con esquivas reactivas</li>
+          <li>Burpees con variaciones inesperadas</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WEEK TABS -->
+  <div class="week-tabs">
+    <button class="week-tab active" data-week="1" onclick="showWeek(1)">SEM 1–2</button>
+    <button class="week-tab" data-week="3" onclick="showWeek(3)">SEM 3–4</button>
+    <button class="week-tab deload" data-week="5" onclick="showWeek(5)">SEM 5 ⟳ DELOAD</button>
+    <button class="week-tab" data-week="6" onclick="showWeek(6)">SEM 6 FINAL</button>
+  </div>
+
+  <!-- SEMANAS 1–2 -->
+  <div id="week-1" class="week-content">
+    <div class="info-box" style="border-left:3px solid var(--purple);background:linear-gradient(90deg,rgba(168,85,247,0.1),var(--surface));margin-bottom:20px">
+      <span class="info-box__icon">🟣</span>
+      <div>
+        <p class="info-box__title">SEMANAS 1–2: INTRODUCCIÓN A LAS HABILIDADES</p>
+        <p class="info-box__text">Cada sesión tiene un bloque de habilidad (skill work) de 15–20 min AL INICIO, cuando el sistema nervioso está fresco. Luego trabajo de fuerza de soporte. Las habilidades requieren SNC descansado — nunca al final de la sesión.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">LUNES</span>
+          <span class="day-card__focus" style="color:var(--purple)">PISTOL SQUAT + LEGS</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--purple)">SKILL WORK (15 min primero)</p>
+          <ul class="exercise-list">
+            <li><span>Pistol squat asistido (toalla/poste)</span><span class="ex-reps">5 × 5 c/pierna</span></li>
+            <li><span>Equilibrio 1 pierna (ojos cerrados)</span><span class="ex-reps">3 × 30 seg</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--gold)">FUERZA DE SOPORTE</p>
+          <ul class="exercise-list">
+            <li><span>Bulgarian split squat</span><span class="ex-reps">4 × 12 c/pierna</span></li>
+            <li><span>Sentadillas explosivas</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Wall sit</span><span class="ex-reps">3 × 90 seg</span></li>
+            <li><span>Hanging leg raises</span><span class="ex-reps">4 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MARTES</span>
+          <span class="day-card__focus" style="color:var(--purple)">HANDSTAND + PUSH</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--purple)">SKILL WORK</p>
+          <ul class="exercise-list">
+            <li><span>Kick-up a pared (cara a pared)</span><span class="ex-reps">8 intentos</span></li>
+            <li><span>Handstand hold contra pared</span><span class="ex-reps">5 × 10 seg</span></li>
+            <li><span>Pike pushups elevados (pies altos)</span><span class="ex-reps">4 × 12</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--gold)">FUERZA DE SOPORTE</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas (varios tipos)</span><span class="ex-reps">4 × 15</span></li>
+            <li><span>Dips (máxima profundidad)</span><span class="ex-reps">4 × 12</span></li>
+            <li><span>Plancha 60 seg</span><span class="ex-reps">3 × 60 seg</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MIÉRCOLES</span>
+          <span class="day-card__focus" style="color:var(--purple)">L-SIT + CROW + PLANCHE LEAN</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--purple)">SKILL WORK TRIPLE (20 min)</p>
+          <ul class="exercise-list">
+            <li><span>L-sit (piernas estiradas, máx tiempo)</span><span class="ex-reps">6 × máx</span></li>
+            <li><span>Crow pose</span><span class="ex-reps">5 × 20–30 seg</span></li>
+            <li><span>Planche lean (inclinación)</span><span class="ex-reps">4 × 20 seg</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--gold)">CORE DE SOPORTE</p>
+          <ul class="exercise-list">
+            <li><span>Hollow body</span><span class="ex-reps">4 × 30 seg</span></li>
+            <li><span>V-ups</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Dragon flag (negativo)</span><span class="ex-reps">3 × 5</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card day-card--rest">
+        <div class="day-card__header">
+          <span class="day-card__day">JUEVES</span>
+          <span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN + MOVILIDAD</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Protocolo movilidad Fase 5</span><span class="ex-reps">30 min</span></li>
+            <li><span>Caminata</span><span class="ex-reps">20 min</span></li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px">El skill work usa el SNC intensamente. El jueves es descanso neurológico obligatorio.</p>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">VIERNES</span>
+          <span class="day-card__focus" style="color:var(--purple)">MUSCLE-UP PROGRESSION + PULL</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--purple)">MUSCLE-UP PROGRESSION</p>
+          <ul class="exercise-list">
+            <li><span>Dominadas explosivas (subida máxima)</span><span class="ex-reps">5 × 5</span></li>
+            <li><span>Transición sobre barra (con salto)</span><span class="ex-reps">5 intentos</span></li>
+            <li><span>Muscle-up negativo (si hay barra alta)</span><span class="ex-reps">3 × 3</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--gold)">PULL DE SOPORTE</p>
+          <ul class="exercise-list">
+            <li><span>Dominadas</span><span class="ex-reps">4 × máx</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Face pulls</span><span class="ex-reps">3 × 15</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">SÁBADO</span>
+          <span class="day-card__focus" style="color:var(--red)">ACONDICIONAMIENTO + REFLEJOS</span>
+        </div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Shadow boxing + esquivas reactivas</span><span class="ex-reps">5 × 3 min</span></li>
+            <li><span>Sprints con cambios de dirección</span><span class="ex-reps">6 × 20 seg</span></li>
+            <li><span>Burpees variados (clap, lateral, giro)</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Trote zona 2</span><span class="ex-reps">20 min</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEMANAS 3–4 -->
+  <div id="week-3" class="week-content" style="display:none">
+    <div class="info-box" style="border-left:3px solid var(--purple);background:linear-gradient(90deg,rgba(168,85,247,0.1),var(--surface));margin-bottom:20px">
+      <span class="info-box__icon">⬆️</span>
+      <div>
+        <p class="info-box__title">SEMANAS 3–4: CONSOLIDACIÓN DE HABILIDADES</p>
+        <p class="info-box__text">El skill work sube en tiempo y calidad. Pistol sin asistencia (o con mínima), handstand 20+ seg, L-sit 20 seg. Semana 4 = pico de volumen de toda la fase.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus" style="color:var(--purple)">PISTOL CONSOLIDADO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Pistol squat (asistencia mínima)</span><span class="ex-reps">5 × 5 c/pierna</span></li>
+            <li><span>Pistol excéntrico (negativo lento)</span><span class="ex-reps">3 × 5 c/pierna</span></li>
+            <li><span>Bulgarian split squat con peso</span><span class="ex-reps">4 × 12</span></li>
+            <li><span>Wall sit 2 min</span><span class="ex-reps">3 × 2 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus" style="color:var(--purple)">HANDSTAND AVANZADO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Handstand contra pared</span><span class="ex-reps">6 × 20 seg</span></li>
+            <li><span>Shoulder taps en handstand</span><span class="ex-reps">4 × 5 c/lado</span></li>
+            <li><span>Pike pushups (máxima elevación)</span><span class="ex-reps">5 × 12</span></li>
+            <li><span>Dips ponderados (mochila)</span><span class="ex-reps">4 × 10</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MIÉ</span><span class="day-card__focus" style="color:var(--purple)">L-SIT + PLANCHE</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>L-sit completo</span><span class="ex-reps">6 × máx (objetivo 20 seg)</span></li>
+            <li><span>Tuck planche</span><span class="ex-reps">5 × 10 seg</span></li>
+            <li><span>Dragon flag completo</span><span class="ex-reps">3 × 5</span></li>
+            <li><span>Hollow body 45 seg</span><span class="ex-reps">4 × 45 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">JUEVES</span><span class="day-card__focus" style="color:var(--green)">RECUPERACIÓN NEUROLÓGICA</span></div>
+        <div class="day-card__body"><p style="color:var(--text-dim);font-size:0.88rem">Movilidad 30 min + caminata. El SNC necesita este día.</p></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIE</span><span class="day-card__focus" style="color:var(--purple)">MUSCLE-UP + PULL TOTAL</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Muscle-up (intentos completos)</span><span class="ex-reps">máx intentos limpios</span></li>
+            <li><span>Dominadas ponderadas (mochila)</span><span class="ex-reps">4 × 6</span></li>
+            <li><span>Australian pull-ups</span><span class="ex-reps">3 × 20</span></li>
+            <li><span>Face pulls + retracción</span><span class="ex-reps">3 × 20</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">SÁB</span><span class="day-card__focus" style="color:var(--red)">ACONDICIONAMIENTO ÉLITE</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--red)">CIRCUITO VILTRUMITA (5 rondas, 30 seg descanso)</p>
+          <ul class="exercise-list">
+            <li><span>Burpees explosivos</span><span class="ex-reps">10 reps</span></li>
+            <li><span>Clap push-ups</span><span class="ex-reps">8 reps</span></li>
+            <li><span>Split jumps</span><span class="ex-reps">10 c/pierna</span></li>
+            <li><span>Shadow boxing máx velocidad</span><span class="ex-reps">30 seg</span></li>
+            <li><span>Mountain climbers</span><span class="ex-reps">30 seg</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELOAD SEM 5 -->
+  <div id="week-5" class="week-content" style="display:none">
+    <div class="info-box info-box--gold mb-4">
+      <span class="info-box__icon">⟳</span>
+      <div>
+        <p class="info-box__title">SEMANA 5 — DELOAD NEUROLÓGICO</p>
+        <p class="info-box__text">El skill work en deload no desaparece — se reduce a 50%. Solo 2–3 sets por habilidad, baja intensidad. El cerebro y el SNC necesitan consolidar los patrones aprendidos. Llegas a la semana final más sharp.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUN</span><span class="day-card__focus">SKILL SUAVE</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Pistol squat asistido (fácil)</span><span class="ex-reps">2 × 5 c/pierna</span></li>
+            <li><span>Handstand 10 seg</span><span class="ex-reps">3 intentos</span></li>
+            <li><span>L-sit 10 seg</span><span class="ex-reps">3 × 10 seg</span></li>
+          </ul>
+          <p style="font-size:0.8rem;color:var(--gold);margin-top:10px">Sin fatiga. Solo mantener el patrón neurológico.</p>
+        </div>
+      </div>
+      <div class="day-card day-card--rest">
+        <div class="day-card__header"><span class="day-card__day">MAR – JUE</span><span class="day-card__focus" style="color:var(--green)">MOVILIDAD + DESCANSO</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem">Movilidad 30 min el martes. Miércoles y jueves: descanso total o caminata. Come muy bien esta semana.</p>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIE</span><span class="day-card__focus">FUERZA LIGERA</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Dominadas</span><span class="ex-reps">3 × 6</span></li>
+            <li><span>Lagartijas</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Sentadillas lentas</span><span class="ex-reps">3 × 12</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 6 — FINAL -->
+  <div id="week-6" class="week-content" style="display:none">
+    <div class="card mb-4 stagger" style="border-color:rgba(168,85,247,0.5);background:linear-gradient(135deg,rgba(168,85,247,0.08),var(--surface))">
+      <p class="heading-lg mb-2" style="color:var(--purple)">SEMANA 6 — EL TEST FINAL</p>
+      <p style="color:var(--text-dim);font-size:0.9rem;line-height:1.7;margin-bottom:16px">
+        Esta es la semana culminante de 32 semanas de trabajo. Entrena Lun–Jue con el protocolo de semanas 3–4 al 90%. El sábado es el TEST FINAL DEL SISTEMA. No es sobre ser perfecto — es sobre documentar cuánto has avanzado desde la semana 1 de la Fase 1.
+      </p>
+      <div class="info-box info-box--gold">
+        <span class="info-box__icon">🏆</span>
+        <div>
+          <p class="info-box__title">TEST FINAL DEL SISTEMA — SÁBADO</p>
+          <p class="info-box__text">Descansado. En orden. Máximo esfuerzo. Compara con tus números de la Fase 1, Semana 6.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card stagger">
+      <p class="label mb-4" style="color:var(--purple)">PROTOCOLO DE TEST — UN EJERCICIO POR VEZ, DESCANSO COMPLETO ENTRE CADA UNO</p>
+      <div class="grid-2" style="gap:16px">
+        <div>
+          <p class="heading-md mb-3" style="color:var(--cyan)">FUERZA</p>
+          <ul class="exercise-list">
+            <li><span>Lagartijas máximas continuas</span><span class="ex-reps">1 set</span></li>
+            <li><span>Dominadas máximas</span><span class="ex-reps">1 set</span></li>
+            <li><span>Dips máximos</span><span class="ex-reps">1 set</span></li>
+            <li><span>Sentadillas en 2 min</span><span class="ex-reps">contar</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="heading-md mb-3" style="color:var(--purple)">HABILIDAD</p>
+          <ul class="exercise-list">
+            <li><span>Pistol squat</span><span class="ex-reps">¿Cuántos limpios?</span></li>
+            <li><span>Handstand hold</span><span class="ex-reps">tiempo máximo</span></li>
+            <li><span>L-sit</span><span class="ex-reps">tiempo máximo</span></li>
+            <li><span>Crow pose</span><span class="ex-reps">tiempo máximo</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="heading-md mb-3" style="color:var(--green)">RESISTENCIA</p>
+          <ul class="exercise-list">
+            <li><span>Plancha máxima</span><span class="ex-reps">tiempo</span></li>
+            <li><span>AMRAP 10 min (burpees+lagartijas+sentadillas)</span><span class="ex-reps">rondas</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="heading-md mb-3" style="color:var(--orange)">CARDIO</p>
+          <ul class="exercise-list">
+            <li><span>Trote 5km</span><span class="ex-reps">medir tiempo</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="info-box info-box--green">
+        <span class="info-box__icon">🎖️</span>
+        <div>
+          <p class="info-box__title">ESTADO VILTRUMITA ALCANZADO SI:</p>
+          <p class="info-box__text">
+            ≥35 lagartijas · ≥12 dominadas · ≥10 dips · Pistol squat × 3 c/pierna · Handstand ≥20 seg · L-sit ≥20 seg · Plancha ≥90 seg · 5km ≤28 min
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box info-box--cyan mt-3">
+        <span class="info-box__icon">🚀</span>
+        <div>
+          <p class="info-box__title">SIGUIENTE MISIÓN: GIMNASIO</p>
+          <p class="info-box__text">Con este nivel de base, tu primer día en el gimnasio con pesas será completamente diferente al de alguien que empieza desde cero. Tu sistema nervioso ya conoce los patrones. Tus articulaciones están preparadas. Puedes cargar hierro de forma inteligente y segura.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMERS -->
+  <section class="mt-6">
+    <div class="section-header"><span class="section-title">TIMERS DE SKILL WORK</span></div>
+    <div class="grid-3">
+      <div data-timer="20" data-label="HOLD 20 SEG" data-mode="countdown"></div>
+      <div data-timer="30" data-label="HOLD 30 SEG" data-mode="countdown"></div>
+      <div data-timer="180" data-label="DESCANSO SKILL" data-mode="countdown"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER FINAL -->
+  <div class="card mt-6 text-center" style="border-color:rgba(168,85,247,0.4);padding:40px">
+    <p class="heading-xl" style="color:var(--purple);margin-bottom:10px">SISTEMA COMPLETADO</p>
+    <p style="color:var(--text-dim);font-size:1rem;margin-bottom:20px">32 semanas · 6 fases · Nivel Viltrumita</p>
+    <a href="../index.html" class="btn btn--cyan">◈ VOLVER AL DASHBOARD</a>
+  </div>
+
+  <div id="footer-nav"></div>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/timers.js"></script>
+<script src="../js/navigation.js"></script>
+<script>
+  function showWeek(num) {
+    document.querySelectorAll('.week-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.week-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('week-' + num).style.display = '';
+    document.querySelector(`[data-week="${num}"]`).classList.add('active');
+  }
+</script>
+</body>
+</html>

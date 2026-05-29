@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="phase" content="5">
+  <title>PROYECTO INVINCIBLE — FASE 5: FLUID DYNAMICS</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/phase.css">
+</head>
+<body class="phase-page">
+
+<nav class="phase-nav">
+  <div class="phase-nav-inner">
+    <a href="../index.html" class="nav-brand">⬡ PROYECTO INVINCIBLE</a>
+    <div class="nav-links">
+      <a href="fase1.html" class="nav-link">F1</a>
+      <a href="fase2.html" class="nav-link">F2</a>
+      <a href="fase3.html" class="nav-link">F3</a>
+      <a href="fase4.html" class="nav-link">F4</a>
+      <a href="fase5.html" class="nav-link active">F5</a>
+      <a href="fase6.html" class="nav-link">F6</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="phase-header">
+    <div class="phase-meta stagger">
+      <span class="phase-number">FASE 05 / 06</span>
+      <span class="badge badge--green">MOVILIDAD</span>
+      <span class="badge badge--cyan">RECUPERACIÓN</span>
+    </div>
+    <h1 class="phase-title glow-green">FLUID DYNAMICS</h1>
+    <p class="phase-subtitle">"El agua no tiene forma pero rompe la roca. Muévete como no te pueden atrapar."</p>
+    <div class="phase-stats-row stagger">
+      <div class="phase-stat"><span class="phase-stat__value">4</span><span class="phase-stat__label">Semanas</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">5</span><span class="phase-stat__label">Días/Semana</span></div>
+      <div class="phase-stat"><span class="phase-stat__value">40–60</span><span class="phase-stat__label">Min/Sesión</span></div>
+      <div class="phase-stat"><span class="phase-stat__value" style="color:var(--green)">★★☆☆☆</span><span class="phase-stat__label">Dificultad</span></div>
+    </div>
+    <div class="flex gap-3 mt-4">
+      <div class="difficulty-meter" data-difficulty="2"></div>
+      <span class="label" style="margin-top:1px">DIFICULTAD</span>
+    </div>
+  </header>
+
+  <!-- CONTEXTO -->
+  <div class="grid-2 mb-6 stagger">
+    <div class="info-box info-box--green">
+      <span class="info-box__icon">💧</span>
+      <div>
+        <p class="info-box__title">¿POR QUÉ ESTA FASE?</p>
+        <p class="info-box__text">Después de 22 semanas de trabajo intenso, las articulaciones y el tejido conectivo necesitan atención. Esta fase <strong>no es una pausa</strong> — es una inversión en el rango de movimiento que hará la Fase 6 posible. Sin buena movilidad, la calistenia avanzada es imposible.</p>
+      </div>
+    </div>
+    <div class="info-box info-box--cyan">
+      <span class="info-box__icon">🖥️</span>
+      <div>
+        <p class="info-box__title">MODO PROGRAMADOR INTENSIFICADO</p>
+        <p class="info-box__text">Esta fase tiene el protocolo anti-office más completo de todo el año. Después de esta fase, el dolor de cuello, hombros y espalda baja relacionado con el escritorio debería ser notablemente menor.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGLAS DE MOVILIDAD -->
+  <section class="mb-6">
+    <div class="section-header"><span class="section-title">REGLAS DE TRABAJO DE MOVILIDAD</span></div>
+    <div class="grid-3 stagger">
+      <div class="card">
+        <p class="heading-md mb-2" style="color:var(--green)">TIEMPO</p>
+        <p style="font-size:0.85rem;color:var(--text-dim)">Mínimo <strong>60 segundos por posición</strong>. El tejido conectivo requiere tiempo bajo tensión pasivo. Los 30 segundos no son suficientes.</p>
+      </div>
+      <div class="card">
+        <p class="heading-md mb-2" style="color:var(--cyan)">RESPIRACIÓN</p>
+        <p style="font-size:0.85rem;color:var(--text-dim)">Inhala por nariz, exhala lentamente por boca en cada posición. La exhalación relaja el sistema nervioso y permite mayor profundidad en el estiramiento.</p>
+      </div>
+      <div class="card">
+        <p class="heading-md mb-2" style="color:var(--gold)">PROGRESIÓN</p>
+        <p style="font-size:0.85rem;color:var(--text-dim)">Semana a semana, busca <strong>1–2 cm más de rango</strong>. No fuerces. La constancia hace el trabajo, no la intensidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEK TABS -->
+  <div class="week-tabs">
+    <button class="week-tab active" data-week="1" onclick="showWeek(1)">SEM 1</button>
+    <button class="week-tab" data-week="2" onclick="showWeek(2)">SEM 2</button>
+    <button class="week-tab" data-week="3" onclick="showWeek(3)">SEM 3</button>
+    <button class="week-tab" data-week="4" onclick="showWeek(4)">SEM 4</button>
+  </div>
+
+  <!-- SEMANA 1 -->
+  <div id="week-1" class="week-content">
+    <div class="info-box info-box--green mb-4">
+      <span class="info-box__icon">🌱</span>
+      <div>
+        <p class="info-box__title">SEMANA 1 — EVALUACIÓN Y BASE DE MOVILIDAD</p>
+        <p class="info-box__text">Descubre tus limitaciones reales. ¿Puedes sentarte en malasana (sentadilla profunda) sin caerte? ¿Tocas el suelo con palmas planas? Anota qué movimientos son difíciles — esos son tu mapa.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">LUNES</span>
+          <span class="day-card__focus">CADERA + CADENA POSTERIOR</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--green)">DINÁMICA (movilidad activa, 5 min)</p>
+          <ul class="exercise-list">
+            <li><span>Círculos de cadera (hula hoop)</span><span class="ex-reps">30 seg c/lado</span></li>
+            <li><span>Patadas frontales y laterales controladas</span><span class="ex-reps">10 c/lado</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--green)">ESTÁTICA (hold profundo)</p>
+          <ul class="exercise-list">
+            <li><span>Malasana (sentadilla profunda)</span><span class="ex-reps">3 min total</span></li>
+            <li><span>Postura paloma (pigeon pose)</span><span class="ex-reps">90 seg c/lado</span></li>
+            <li><span>Zancada de lagarto baja</span><span class="ex-reps">90 seg c/lado</span></li>
+            <li><span>Estiramiento isquiotibiales de pie</span><span class="ex-reps">90 seg c/pierna</span></li>
+            <li><span>Postura del niño (child's pose)</span><span class="ex-reps">2 min</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--cyan)">ANTI-OFFICE (glúteo + cadera)</p>
+          <ul class="exercise-list">
+            <li><span>Clam shells (con liga si tienes)</span><span class="ex-reps">2 × 20 c/lado</span></li>
+            <li><span>Puente glúteos + squeeze</span><span class="ex-reps">2 × 20</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MARTES</span>
+          <span class="day-card__focus">HOMBROS + COLUMNA TORÁCICA</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--green)">ACTIVACIÓN ESCAPULAR</p>
+          <ul class="exercise-list">
+            <li><span>Retracción + depresión escapular</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Rotación externa con liga/toalla</span><span class="ex-reps">3 × 15 c/lado</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--cyan)">MOVILIDAD TORÁCICA (ANTI-OFFICE)</p>
+          <ul class="exercise-list">
+            <li><span>Rotación torácica sentado</span><span class="ex-reps">10 c/lado × 3</span></li>
+            <li><span>Thread the needle</span><span class="ex-reps">10 c/lado × 2</span></li>
+            <li><span>Foam rolling columna torácica</span><span class="ex-reps">3 min</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--green)">HOMBROS</p>
+          <ul class="exercise-list">
+            <li><span>Estiramiento posterior hombro (cruce)</span><span class="ex-reps">90 seg c/lado</span></li>
+            <li><span>Estiramiento en pared (bicipital)</span><span class="ex-reps">90 seg c/lado</span></li>
+            <li><span>Doorway stretch (pectoral + anterior)</span><span class="ex-reps">2 min</span></li>
+            <li><span>Cobra pose</span><span class="ex-reps">3 × 60 seg</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">MIÉRCOLES</span>
+          <span class="day-card__focus">FUERZA DE MOVILIDAD</span>
+        </div>
+        <div class="day-card__body">
+          <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">Movilidad <em>activa</em> — fuerza en rango completo. Diferente al estiramiento pasivo.</p>
+          <ul class="exercise-list">
+            <li><span>Sentadillas completas lentas (5 seg bajando)</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Lagartijas rango completo (pecho al suelo)</span><span class="ex-reps">3 × 10</span></li>
+            <li><span>Dominadas (ROM completo, brazos rectos)</span><span class="ex-reps">3 × 6</span></li>
+            <li><span>Jefferson curl (espalda redondeada, peso mínimo)</span><span class="ex-reps">3 × 8</span></li>
+            <li><span>Pike pushups (rango máximo)</span><span class="ex-reps">3 × 10</span></li>
+          </ul>
+          <div class="info-box info-box--gold mt-3">
+            <span class="info-box__icon">💡</span>
+            <div><p class="info-box__text" style="font-size:0.82rem">Jefferson curl: flexión espinal con objeto pesado ligero. Entrena la espalda a tolerar carga en posición redondeada, vital para salud lumbar a largo plazo.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">JUEVES</span>
+          <span class="day-card__focus">CUELLO + MUÑECAS + PIES (ANTI-OFFICE TOTAL)</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--cyan)">CUELLO (ZONA CRÍTICA PROGRAMADOR)</p>
+          <ul class="exercise-list">
+            <li><span>Flexión/extensión cervical suave</span><span class="ex-reps">10 × 2</span></li>
+            <li><span>Inclinación lateral + hold</span><span class="ex-reps">30 seg c/lado × 2</span></li>
+            <li><span>Rotación lenta + hold final</span><span class="ex-reps">30 seg c/lado × 2</span></li>
+            <li><span>Chin tucks (corrección postura)</span><span class="ex-reps">3 × 15</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--cyan)">MUÑECAS</p>
+          <ul class="exercise-list">
+            <li><span>Extensión muñeca (palmas al suelo)</span><span class="ex-reps">60 seg</span></li>
+            <li><span>Flexión muñeca (dorso al suelo)</span><span class="ex-reps">60 seg</span></li>
+            <li><span>Círculos de muñeca con presión</span><span class="ex-reps">30 seg c/dir</span></li>
+            <li><span>Lagartijas de muñecas (finger pushups)</span><span class="ex-reps">2 × 10</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--green)">PIES + TOBILLOS</p>
+          <ul class="exercise-list">
+            <li><span>Rotación de tobillo</span><span class="ex-reps">20 c/lado</span></li>
+            <li><span>Estiramiento plantar (fascia)</span><span class="ex-reps">60 seg c/pie</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-card__header">
+          <span class="day-card__day">VIERNES</span>
+          <span class="day-card__focus">SESIÓN COMPLETA + CARDIO SUAVE</span>
+        </div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--green)">MOVILIDAD FULL BODY (30 min)</p>
+          <ul class="exercise-list">
+            <li><span>Saludo al sol (sun salutation) × 5</span><span class="ex-reps">5 min</span></li>
+            <li><span>Cadera: paloma + lagarto + malasana</span><span class="ex-reps">10 min</span></li>
+            <li><span>Hombros: cobra + doorway + thread needle</span><span class="ex-reps">8 min</span></li>
+            <li><span>Columna: cat-cow + torsión + niño</span><span class="ex-reps">7 min</span></li>
+          </ul>
+          <p class="label mb-2 mt-3" style="color:var(--purple)">CARDIO SUAVE</p>
+          <ul class="exercise-list">
+            <li><span>Caminata o trote zona 2</span><span class="ex-reps">20–25 min</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEMANA 2 -->
+  <div id="week-2" class="week-content" style="display:none">
+    <div class="info-box info-box--green mb-4">
+      <span class="info-box__icon">📈</span>
+      <div>
+        <p class="info-box__title">SEMANA 2 — PROFUNDIZACIÓN</p>
+        <p class="info-box__text">Aumenta el tiempo de hold a 2 min por posición. Introduce el squat profundo con talones elevados si aún no llegas al fondo. Agrega la "pausa de respiración" — 3 respiraciones profundas por posición antes de salir.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUNES</span><span class="day-card__focus">CADERA AVANZADA</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Malasana (más profunda)</span><span class="ex-reps">4 min total</span></li>
+            <li><span>Splits 90/90 (piernas en L)</span><span class="ex-reps">2 min c/lado</span></li>
+            <li><span>Paloma profunda</span><span class="ex-reps">2 min c/lado</span></li>
+            <li><span>Lagarto + rotación de cadera</span><span class="ex-reps">90 seg c/lado</span></li>
+            <li><span>Sentadilla estiramiento activo</span><span class="ex-reps">20 reps lentas</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MARTES</span><span class="day-card__focus">HOMBROS + ESPALDA</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Rotación interna/externa hombro (liga)</span><span class="ex-reps">3 × 20 c/lado</span></li>
+            <li><span>Doorway stretch avanzado</span><span class="ex-reps">2 min</span></li>
+            <li><span>Puppy pose (hombros profundo)</span><span class="ex-reps">2 min</span></li>
+            <li><span>Rotación torácica con foam roller</span><span class="ex-reps">3 min</span></li>
+            <li><span>Cobra → upward dog</span><span class="ex-reps">3 × 60 seg</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MIÉ</span><span class="day-card__focus">FUERZA MOVILIDAD + SKILL INTRO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Crow pose (cuervo) — intro</span><span class="ex-reps">4 × 15 seg</span></li>
+            <li><span>L-sit en suelo (piernas dobladas)</span><span class="ex-reps">4 × 10 seg</span></li>
+            <li><span>Pike press negativo</span><span class="ex-reps">3 × 5</span></li>
+            <li><span>Sentadilla pistol asistida (intro)</span><span class="ex-reps">3 × 5 c/pierna</span></li>
+          </ul>
+          <div class="info-box info-box--cyan mt-3">
+            <span class="info-box__icon">⚡</span>
+            <div><p class="info-box__text" style="font-size:0.82rem">Estas son las habilidades que desarrollarás en la Fase 6. Esta semana es solo exploración — sin presión de completarlas.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">JUE</span><span class="day-card__focus">ANTI-OFFICE PROFUNDO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Chin tucks + extensión cervical</span><span class="ex-reps">3 × 15</span></li>
+            <li><span>Estiramiento escaleno (cuello lateral)</span><span class="ex-reps">2 min c/lado</span></li>
+            <li><span>Pec stretch + forward fold</span><span class="ex-reps">2 min c/u</span></li>
+            <li><span>Hip flexor stretch profundo</span><span class="ex-reps">2 min c/lado</span></li>
+            <li><span>Muñecas: protocolo completo</span><span class="ex-reps">5 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIE</span><span class="day-card__focus">SESIÓN FLUIDA COMPLETA</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Sun salutation × 8</span><span class="ex-reps">8 min</span></li>
+            <li><span>Cadera + hamstrings profundo</span><span class="ex-reps">12 min</span></li>
+            <li><span>Hombros + torácica</span><span class="ex-reps">10 min</span></li>
+            <li><span>Caminata o trote suave</span><span class="ex-reps">25 min</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 3 -->
+  <div id="week-3" class="week-content" style="display:none">
+    <div class="info-box info-box--cyan mb-4">
+      <span class="info-box__icon">🌊</span>
+      <div>
+        <p class="info-box__title">SEMANA 3 — INTEGRACIÓN FUERZA + MOVILIDAD</p>
+        <p class="info-box__text">Esta semana combinas movilidad con trabajo de habilidad. Mayor tiempo en crow pose, L-sit y pistol squat asistido. El cuerpo empieza a "entender" los patrones de la Fase 6.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUN</span><span class="day-card__focus">CADERA MÁXIMO RANGO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Malasana con pared (soporte)</span><span class="ex-reps">5 min</span></li>
+            <li><span>Paloma + rotación activa de cadera</span><span class="ex-reps">2 min c/lado</span></li>
+            <li><span>Splits 90/90 → transición</span><span class="ex-reps">5 min</span></li>
+            <li><span>Sentadilla pistol asistida negativa</span><span class="ex-reps">3 × 5 c/pierna</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MAR</span><span class="day-card__focus">HOMBROS + SKILL</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Puppy pose → cobra → upward dog</span><span class="ex-reps">5 rondas</span></li>
+            <li><span>Crow pose</span><span class="ex-reps">5 × 20 seg</span></li>
+            <li><span>L-sit piernas dobladas</span><span class="ex-reps">5 × 15 seg</span></li>
+            <li><span>Pike press negativo</span><span class="ex-reps">3 × 6</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">MIÉ–JUE</span><span class="day-card__focus">ANTI-OFFICE + CARDIO</span></div>
+        <div class="day-card__body">
+          <ul class="exercise-list">
+            <li><span>Protocolo anti-office completo</span><span class="ex-reps">30 min</span></li>
+            <li><span>Trote zona 2</span><span class="ex-reps">25–30 min</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">VIE</span><span class="day-card__focus">EVALUACIÓN DE MOVILIDAD</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--green)">MIDE TU PROGRESO vs SEMANA 1:</p>
+          <ul class="exercise-list">
+            <li><span>¿Llegas más profundo en malasana?</span><span class="ex-reps">Anota</span></li>
+            <li><span>¿Más rotación torácica?</span><span class="ex-reps">Anota</span></li>
+            <li><span>¿Hombros más sueltos?</span><span class="ex-reps">Anota</span></li>
+            <li><span>¿Dolor de cuello/espalda reducido?</span><span class="ex-reps">Anota</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 4 -->
+  <div id="week-4" class="week-content" style="display:none">
+    <div class="info-box info-box--cyan mb-4">
+      <span class="info-box__icon">🚀</span>
+      <div>
+        <p class="info-box__title">SEMANA 4 — PUENTE HACIA LA FASE 6</p>
+        <p class="info-box__text">Última semana de movilidad intensa. Enfócate en los movimientos pre-requisito de la Fase 6: crow pose sólido, L-sit 20 seg, sentadilla pistol asistida fluida. El sábado es el TEST de movilidad.</p>
+      </div>
+    </div>
+    <div class="grid-auto stagger">
+      <div class="day-card">
+        <div class="day-card__header"><span class="day-card__day">LUN–JUE</span><span class="day-card__focus">PROTOCOLO COMPLETO</span></div>
+        <div class="day-card__body">
+          <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:12px">Repite el mejor protocolo de semana 3 para cada día. Añade 30 seg a cada hold estático.</p>
+          <ul class="exercise-list">
+            <li><span>Crow pose objetivo</span><span class="ex-reps">5 × 25 seg</span></li>
+            <li><span>L-sit objetivo</span><span class="ex-reps">5 × 20 seg</span></li>
+            <li><span>Pistol squat asistido</span><span class="ex-reps">3 × 6 c/pierna</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="day-card" style="border-color:rgba(0,255,136,0.4)">
+        <div class="day-card__header"><span class="day-card__day">VIERNES</span><span class="day-card__focus" style="color:var(--green)">TEST DE MOVILIDAD</span></div>
+        <div class="day-card__body">
+          <p class="label mb-2" style="color:var(--green)">MÉTRICAS FINALES FASE 5</p>
+          <ul class="exercise-list">
+            <li><span>Malasana sin soporte</span><span class="ex-reps">¿Cuánto tiempo?</span></li>
+            <li><span>Crow pose</span><span class="ex-reps">¿Cuántos segundos?</span></li>
+            <li><span>L-sit (piernas dobladas)</span><span class="ex-reps">¿Cuántos segundos?</span></li>
+            <li><span>Tocar suelo con palmas (piernas rectas)</span><span class="ex-reps">¿Sí / No?</span></li>
+          </ul>
+          <div class="info-box info-box--green mt-3">
+            <span class="info-box__icon">✓</span>
+            <div>
+              <p class="info-box__title">LISTO PARA FASE 6 SI:</p>
+              <p class="info-box__text">Crow pose ≥ 20 seg · L-sit ≥ 15 seg · Sin dolor de hombros en pike · Malasana ≥ 2 min</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMERS MOVILIDAD -->
+  <section class="mt-6">
+    <div class="section-header"><span class="section-title">TIMERS DE POSICIONES</span></div>
+    <div class="grid-3">
+      <div data-timer="60" data-label="HOLD 60 SEG" data-mode="countdown"></div>
+      <div data-timer="90" data-label="HOLD 90 SEG" data-mode="countdown"></div>
+      <div data-timer="120" data-label="HOLD 2 MIN" data-mode="countdown"></div>
+    </div>
+  </section>
+
+  <div id="footer-nav"></div>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/timers.js"></script>
+<script src="../js/navigation.js"></script>
+<script>
+  function showWeek(num) {
+    document.querySelectorAll('.week-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.week-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('week-' + num).style.display = '';
+    document.querySelector(`[data-week="${num}"]`).classList.add('active');
+  }
+</script>
+</body>
+</html>
